@@ -6,7 +6,7 @@
     </div>
 
     <div class="case-body">
-      <div class="case-num" :style="{ color: accent }">{{ String(num).padStart(2, '0') }}</div>
+      <div class="case-num" :style="{ color: accent }">{{ formattedNum }}</div>
       <div class="case-name">{{ name }}</div>
       <div class="rule-rust" :style="{ background: accent }"></div>
       <div class="case-flow"><slot /></div>
@@ -42,6 +42,14 @@ const accent = computed(() => {
   if (props.bg === 'sage') return 'var(--c-sage)'
   if (props.bg === 'blue') return 'var(--c-dusty)'
   return 'var(--c-rust)'
+})
+
+const formattedNum = computed(() => {
+  const n = props.num
+  if (typeof n === 'number' || /^\d+$/.test(String(n))) {
+    return String(n).padStart(2, '0')
+  }
+  return String(n)
 })
 </script>
 

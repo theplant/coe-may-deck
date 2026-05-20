@@ -53,7 +53,7 @@ defineProps({
   font-size: 4.4rem;
   line-height: 1.12;
   letter-spacing: -0.025em;
-  color: var(--c-ink);
+  color: inherit;
   font-variation-settings: 'opsz' 144, 'SOFT' 40, 'wght' 700;
 }
 .size-md .moment-text { font-size: 3.2rem; line-height: 1.18; }
@@ -91,6 +91,34 @@ defineProps({
   letter-spacing: 0.01em;
 }
 .moment-footnote .prompt { color: var(--c-rust); font-weight: 700; }
+
+/* Night-mode overrides — used by closing CTA slide */
+.bg-night .moment-text {
+  color: var(--c-night-ink);
+}
+.bg-night .moment-text :deep(strong) {
+  color: var(--c-night-rust);
+}
+.bg-night .moment-cn {
+  color: rgba(244, 239, 227, 0.7);
+}
+.bg-night .moment-footnote {
+  color: rgba(244, 239, 227, 0.45);
+}
+.bg-night .moment-footnote .prompt {
+  color: var(--c-night-rust);
+}
+.bg-night .status-line {
+  color: rgba(244, 239, 227, 0.5);
+  border-top-color: rgba(244, 239, 227, 0.2);
+}
+.bg-night .status-line .prompt {
+  color: var(--c-night-rust);
+}
+.bg-night.eyebrow,
+.bg-night .eyebrow {
+  color: rgba(244, 239, 227, 0.55);
+}
 
 .status-line {
   position: absolute;

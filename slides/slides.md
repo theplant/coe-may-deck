@@ -332,7 +332,411 @@ bg: sage
 Chat artifacts → Google Doc tabs, idempotent.
 
 <!--
-TODO: storyboard the rest of Case 2 (4 min), Case 3 (6 min), and
-the live closing block (18–22 min).
-See outline.md → .scratch/may-training/outline.md
+Section title for Case 2. Frame:
+  "You finish a chat session. You have a markdown draft. But your PM lives
+   in Google Docs. Your designer lives in Google Docs. Your stakeholders
+   live in Google Docs. The chat output is stuck."
+-->
+
+---
+layout: moment
+eyebrow: case 2 · the gap
+size: md
+bg: sage
+cn: 你的 markdown 在聊天里 —— 但你团队读的是 Google Docs。
+---
+
+The artifact is **here**.<br/>
+Your team reads it **there**.
+
+<!--
+Land the gap. Everyone in the room — engineer or not — knows this gap.
+Then transition: "Here's the boring, beautiful answer."
+-->
+
+---
+layout: moment
+eyebrow: case 2 · demo
+size: md
+bg: sage
+footnote: "command: mds README.md gdoc:1Ab…/PRD"
+status: "roll demo · md-to-gdoc-tab · ~3 min recording"
+cn: 一条命令。同步到指定的 tab。可反复跑、不改坏。
+---
+
+One **command**. One **tab**. **Idempotent**.
+
+<!--
+Show the recording: change markdown locally → run mds → tab updates.
+Run it again → no change. Run it after editing → just the diff.
+
+Punchline (verbal):
+  "AI doesn't have to escape the chat window through Git. It can also
+   escape through your team's everyday tools — Docs, Sheets, Notion,
+   Slack canvases. Wherever the team already lives."
+-->
+
+---
+layout: moment
+eyebrow: case 2 · landing
+size: md
+cn: AI 的稿子 → 直接落到团队每天看的地方。
+status: 'next: case 3 — system-monitor'
+---
+
+AI's draft lands **where the team already lives**.
+
+<!--
+Quick beat. Then advance to Case 3.
+-->
+
+---
+layout: case-cover
+num: 3
+total: 3
+name: system-monitor
+cn: 屏幕 + 系统音频 → whisper.cpp 转录 → Claude 每 3 分钟概括
+repo: sunfmin/system-monitor
+runtime: 6 min
+proves: AI builds the missing tools
+bg: blue
+---
+
+Screen + audio → whisper.cpp → Claude reads & summarizes.
+
+<!--
+Frame:
+  "You're in a Zoom. Two hours later you have nothing — no transcript,
+   no summary, no record of what was decided. Sound familiar?"
+
+  "Now: a Claude Code skill that watches your screen and listens to the
+   system audio. Transcribes in real time with whisper.cpp on Metal GPU.
+   Every 3 minutes, Claude reads the screenshots + transcripts and writes
+   a running summary."
+
+  "Here's what's wild. Look at the architecture."
+-->
+
+---
+layout: default
+class: bg-blue
+---
+
+<div class="arch-eyebrow mb-3">
+  <span class="prompt">❯</span> case 3 · the architecture
+</div>
+
+<div class="arch-card">
+
+```text
+ScreenCaptureKit ──► whisper.cpp C API (Metal GPU)
+                            │
+                  ┌─────────┴──────────┐
+                  │                    │
+            2s partials           20s finals
+          (streaming text)     (full sentences)
+                  │                    │
+                  └────────┬───────────┘
+                           │
+                   WebSocket push :8421
+                           ▼
+                   Live web dashboard
+                           ▼
+              Claude reads + summarizes every 3 min
+```
+
+</div>
+
+<div v-click class="arch-callout mt-8">
+  This binary — <code>stream-audio-whisper</code> — is <strong>Swift</strong>.<br/>
+  <span class="arch-cn">这个二进制是 <strong>Claude 写的</strong>。</span>
+</div>
+
+<style scoped>
+.arch-eyebrow {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+}
+.arch-eyebrow .prompt { color: var(--c-dusty); font-weight: 700; }
+
+.arch-card :deep(pre) {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(79, 102, 120, 0.25) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.35 !important;
+  padding: 1rem 1.4rem !important;
+  margin: 0 !important;
+}
+
+.arch-callout {
+  font-family: var(--f-display);
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--c-ink);
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  letter-spacing: -0.01em;
+}
+.arch-callout :deep(strong) {
+  color: var(--c-dusty);
+  font-weight: 800;
+}
+.arch-callout :deep(code) {
+  font-family: var(--f-mono);
+  font-size: 0.9em;
+  background: rgba(79, 102, 120, 0.12);
+  color: var(--c-ink);
+  padding: 0.05em 0.4em;
+  border-radius: 3px;
+  border: 1px solid rgba(79, 102, 120, 0.2);
+}
+.arch-cn {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: var(--f-display-cn);
+  font-size: 1.05rem;
+  color: var(--c-ink-soft);
+  font-weight: 400;
+}
+.arch-cn :deep(strong) {
+  color: var(--c-dusty);
+  font-weight: 600;
+}
+</style>
+
+<!--
+Walk the diagram top to bottom:
+  - ScreenCaptureKit is Apple's screen+audio framework.
+  - whisper.cpp transcribes via C API, accelerated on Metal GPU.
+  - Two cadences: 2s partials for streaming subtitles, 20s finals with
+    punctuation and sentence segmentation.
+  - WebSocket pushes to a local dashboard. Claude reads the screenshots
+    + transcripts every 3 min and writes a summary.
+
+THEN click to reveal the punchline:
+  "This binary — stream-audio-whisper — is Swift. Claude wrote it."
+  
+Pause. Repeat in plain language:
+  "Claude didn't import a library. It wrote a Swift program that calls
+   ScreenCaptureKit and pipes audio into whisper.cpp's C API with Metal.
+   It built the missing tool."
+-->
+
+---
+layout: moment
+eyebrow: case 3 · landing
+size: md
+cn: AI 不只是用工具 —— 它还会造工具。
+status: 'three cases · one more thing'
+---
+
+AI doesn't just **use** tools.<br/>
+AI **builds** them.
+
+<!--
+Big pause. Land the escalation:
+  Case 1 — AI uses your CLI + Git + CI
+  Case 2 — AI's output reaches your everyday tools
+  Case 3 — AI builds the tools it needs
+
+Then bridge: "Three cases. One more thing."
+-->
+
+---
+layout: moment
+eyebrow: interlude
+size: md
+cn: 三个案例。还有最后一件事。
+---
+
+Three cases.<br/>
+**One more thing.**
+
+<!--
+Steve Jobs beat. Don't apologize for it.
+Advance to the mattpocock/skills section cover.
+-->
+
+---
+layout: case-cover
+num: "★"
+total: "—"
+name: mattpocock/skills
+cn: AI 的能力本身 —— 也是 Git 仓库里的 markdown 文件。
+repo: mattpocock/skills
+runtime: live
+proves: AI capabilities ARE versioned team assets
+---
+
+Skills as Git-tracked, PR-reviewable, team-shared assets.
+
+<!--
+This is the climax section. Frame:
+
+  "So far: AI uses tools. AI integrates with tools. AI builds tools.
+   But here's the thing nobody told you yet — the AI's own capabilities
+   can be packaged AS files. In a Git repo. Reviewed in PRs. Shared
+   across a team. Evolved through commit history."
+
+  "This is what Matt Pocock has been building at github.com/mattpocock/skills.
+   And we're going to use four of them, live, right now, in a fresh empty repo."
+-->
+
+---
+layout: moment
+eyebrow: closing · the live arc
+size: sm
+cn: '安装 skills · 用 grill 把想法磨清楚 · 生成 PRD · 拆成 GitHub Issues'
+status: 'sunfmin/coe-may-demo · empty repo · ~18 min'
+---
+
+/setup-matt-pocock-skills → /grill-with-docs<br/>
+→ /to-prd → /to-issues
+
+<!--
+This slide tells the audience what's about to happen LIVE. Read each
+skill aloud:
+
+  - /setup-matt-pocock-skills  — scaffold the repo for agent work
+  - /grill-with-docs           — interview a one-liner into substance
+  - /to-prd                    — produce a PRD
+  - /to-issues                 — open real GitHub Issues
+
+Then:
+  "I need one sentence from this room. Something you'd want to build,
+   propose, or improve. We'll turn it — together, live — into a tracked
+   piece of work in a public repo. You can verify it after this talk."
+
+Wait for a volunteer. Pick a usable one. (If none in 15s, deploy backup:
+"feedback questionnaire + after-actions for this very training.")
+
+Switch to the demo machine. Slidev pauses here. Come back to slides
+when the demo ends.
+-->
+
+---
+layout: default
+class: bg-paper
+---
+
+<div class="recap-eyebrow mb-3">
+  <span class="prompt">❯</span> what just happened
+</div>
+
+<GitLog
+  repo="sunfmin/coe-may-demo"
+  :commits="[
+    { date: 'just now', msg: 'Initial commit: CLAUDE.md + docs/agents/ scaffold (setup)' },
+    { date: 'just now', msg: 'Glossary + outline for <audience topic> (grill-with-docs)' },
+    { date: 'just now', msg: 'PRD for <audience topic> (to-prd)' },
+    { date: 'just now', msg: 'Opened 5 issues on github.com/sunfmin/coe-may-demo (to-issues)' },
+  ]"
+/>
+
+<div v-click class="recap-line mt-10">
+  Twenty minutes ago this repo was <strong>empty</strong>.
+</div>
+
+<div v-click class="recap-line">
+  Now there's a glossary, a PRD, and <strong>tracked issues</strong> —<br/>
+  shaped by a sentence <span class="kw">someone in this room</span> said.
+</div>
+
+<style scoped>
+.recap-eyebrow {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+}
+.recap-eyebrow .prompt { color: var(--c-rust); font-weight: 700; }
+
+.recap-line {
+  font-family: var(--f-display);
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--c-ink);
+  font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  letter-spacing: -0.01em;
+  margin-top: 0.4rem;
+}
+.recap-line :deep(strong) {
+  color: var(--c-rust);
+  font-weight: 800;
+}
+</style>
+
+<!--
+This slide goes up AFTER the live demo block completes.
+
+The commit messages on this slide are illustrative — the speaker will read
+the real git log from the demo machine. Slidev is just visual reinforcement
+behind the verbal recap.
+
+Click 1: "Twenty minutes ago this repo was empty."
+Click 2: "Now there's a glossary, a PRD, and tracked issues — shaped by a
+          sentence someone in this room said."
+
+Pause. Long pause. This is the deck's climax line.
+Then advance to the CTA.
+-->
+
+---
+layout: moment
+bg: night
+eyebrow: tonight
+size: md
+cn: 今晚 —— 装好 Claude Code，克隆 mattpocock/skills，对你一直拖着的那件事跑一次 /grill-with-docs。
+status: 'github.com/mattpocock/skills'
+---
+
+Install Claude Code. Clone mattpocock/skills.<br/>
+Run **/grill-with-docs** on the one thing you've been putting off.
+
+<!--
+Dark slide. Final CTA. Read it slowly:
+
+  "Tonight. Not next week. Tonight, install Claude Code. Clone
+   mattpocock/skills. Pick one thing you've been putting off — a project,
+   a design doc, an idea you keep restating in different Slack DMs.
+   Run /grill-with-docs on it. See what falls out."
+
+Then advance to Q&A.
+-->
+
+---
+layout: moment
+eyebrow: questions
+size: md
+cn: 问题？想法？反对？
+status: 'github.com/theplant/coe-may-deck'
+---
+
+Questions. Pushback. Stories.
+
+<!--
+Open the floor. If the room is quiet, deploy a plant in this order:
+
+  1. (non-engineers)  "A question I get a lot is: 'I can't code — is this
+                       really for me?' — Skills are markdown describing
+                       procedures. Anyone literate can read one. Show
+                       /git-for-everyone as a counter-example."
+
+  2. (engineers)      "Another one: 'How do we trust AI commits in
+                       production code?' — Same way we trust junior-dev
+                       PRs. Review, revert, blame. Git makes AI changes
+                       MORE auditable than chat sessions, not less."
+
+  3. (leadership)     "And: 'Where do you start if your codebase is messy
+                       or has no docs?' — Start with /grill-with-docs on
+                       the one thing you know best. AI helps build the
+                       docs; you don't need docs before AI can help."
+
+End by pointing at the deck repo: "Slides, outline, all the cases — public
+at github.com/theplant/coe-may-deck. Steal anything."
 -->
