@@ -50,18 +50,26 @@ layout: moment
 eyebrow: demo · 0 / 1
 footnote: "task: summarize today's #engineering Slack channel"
 cn: 同一个任务，两种 AI 的工作方式。
-status: "roll demo · split-screen · chat (left) vs. slackwiki (right)"
+status: "live · split-screen · chat (left) vs. slackwiki (right) · ~5 min"
 ---
 
 Watch **this**.
 
 <!--
-Cue the side-by-side recording (block 1 from outline).
-Left: chat AI doing it — copy/paste, output trapped in chat history.
-Right: slackwiki GitHub Action running daily, committing to wiki repo.
-~4–5 min. Narrate while it plays.
+Run the side-by-side LIVE (block 1 from outline). Two terminal windows
+(or screen-shared tabs) side by side on the demo machine:
+- Left: open ChatGPT / Claude.ai web — paste the prompt, let it stream
+  output into the chat. Output is trapped in the chat tab.
+- Right: trigger the slackwiki GitHub Action manually (or show
+  yesterday's run) — output lands as a commit on the wiki repo.
+
+~4–5 min. Narrate the contrast while both run.
 End on the git log of sunfmin/slackwiki — let the room read 2–3 commit
 messages on screen before moving on.
+
+If the live split-screen breaks: just open sunfmin/slackwiki in the
+browser, scroll the markdown, then open the git log. The artifact is
+the proof — the live trigger is gravy.
 -->
 
 ---
@@ -225,7 +233,11 @@ Section title for Case 1. Pause. Then:
   "Here's what I built — or rather, what Claude Code built with me,
    every day, in the background."
 
-Play the slackwiki recording. ~10 min for this case.
+Run the slackwiki case LIVE: browser → github.com/sunfmin/slackwiki,
+walk the wiki/ tree, then `git log` in a local clone. ~10 min total.
+
+If the live walk drags: cut to the git log slide (next) and let the
+commit messages carry the proof.
 -->
 
 ---
@@ -360,15 +372,19 @@ eyebrow: case 2 · demo
 size: md
 bg: sage
 footnote: "command: mds README.md gdoc:1Ab…/PRD"
-status: "roll demo · md-to-gdoc-tab · ~3 min recording"
+status: "live · md-to-gdoc-tab · ~3 min"
 cn: 一条命令。同步到指定的 tab。可反复跑、不改坏。
 ---
 
 One **command**. One **tab**. **Idempotent**.
 
 <!--
-Show the recording: change markdown locally → run mds → tab updates.
-Run it again → no change. Run it after editing → just the diff.
+Run it LIVE: edit a markdown file locally → `mds` → switch to the
+Google Doc tab in the browser → refresh. Run again → no change. Edit
+the markdown → run again → just the diff lands.
+
+If the live run breaks: open the already-synced Google Doc and walk
+the tab structure — that artifact alone proves the case.
 
 Punchline (verbal):
   "AI doesn't have to escape the chat window through Git. It can also

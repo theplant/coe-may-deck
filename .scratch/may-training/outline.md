@@ -22,14 +22,16 @@ Everything else is evidence for this.
 | # | Block | Time | Mode | Purpose |
 |---|---|---|---|---|
 | 0 | Title slide + hook line | 1 min | static | Anchor the thesis |
-| 1 | **Opening: side-by-side comparison** — left: chat AI doing "summarize today's #engineering"; right: same task done by `slackwiki` GitHub Action, output committed to wiki repo. Show real `git log` from `sunfmin/slackwiki`. | 4–5 min | **recorded** (split-screen video) | Visceral "this is different" moment |
+| 1 | **Opening: side-by-side comparison** — left: chat AI doing "summarize today's #engineering"; right: same task done by `slackwiki` GitHub Action, output committed to wiki repo. Show real `git log` from `sunfmin/slackwiki`. | 4–5 min | **live** (two windows, split-screen) | Visceral "this is different" moment |
 | 2 | **"When chat AI still wins"** — single slide, 3 bullets: exploring unknowns, brainstorming / writing design, idle thinking with no artifact need. | 2 min | static | Reassurance — preempt "are you telling us to abandon ChatGPT" |
-| 3 | **Case 1 — slackwiki (headline)**: walk through what it does, then open the `sunfmin/slackwiki` git log and read 4–5 Claude-coauthored commit messages aloud. Punchline: "the AI's reasoning, the trade-offs, the failed attempts — all here, forever." | 10 min | recorded terminal + screenshots | Proves: AI in CLI + Git history + collab |
-| 4 | **Case 2 — md-to-gdoc-tab**: chat-room artifact → Google Doc tab, idempotent. Most relatable for PM/ops. | 4 min | recorded | Proves: AI output goes back into everyday tools |
-| 5 | **Case 3 — system-monitor**: skill that records screen + audio, transcribes via whisper.cpp, then Claude summarizes every 3 min. Punchline: "Claude didn't just glue tools together — it wrote the Swift binary that uses ScreenCaptureKit + whisper.cpp's C API with Metal GPU." | 6 min | recorded dashboard clip + architecture diagram | Proves: AI builds the missing tools, not just integrates existing ones |
+| 3 | **Case 1 — slackwiki (headline)**: walk through what it does, then open the `sunfmin/slackwiki` git log and read 4–5 Claude-coauthored commit messages aloud. Punchline: "the AI's reasoning, the trade-offs, the failed attempts — all here, forever." | 10 min | **live** (browser + terminal) | Proves: AI in CLI + Git history + collab |
+| 4 | **Case 2 — md-to-gdoc-tab**: chat-room artifact → Google Doc tab, idempotent. Most relatable for PM/ops. | 4 min | **live** (edit md → `mds` → refresh Doc) | Proves: AI output goes back into everyday tools |
+| 5 | **Case 3 — system-monitor**: skill that records screen + audio, transcribes via whisper.cpp, then Claude summarizes every 3 min. Punchline: "Claude didn't just glue tools together — it wrote the Swift binary that uses ScreenCaptureKit + whisper.cpp's C API with Metal GPU." | 6 min | **live** (start app pre-talk; open dashboard) + architecture diagram | Proves: AI builds the missing tools, not just integrates existing ones |
 | 6 | **Closing punchline — mattpocock/skills LIVE**: take an audience-suggested one-liner → run all 4 skills end-to-end in a fresh empty repo `sunfmin/coe-may-demo`: **`/setup-matt-pocock-skills`** (scaffold CLAUDE.md + docs/agents/) → **`/grill-with-docs`** (interview the audience-sourced one-liner into something substantive) → **`/to-prd`** (produce PRD.md) → **`/to-issues`** (create real GitHub Issues). Backup topic: "May training follow-up — feedback questionnaire + 4 after-action items." | 18–22 min | **LIVE** | Proves: AI capabilities are a versioned team asset; closes the loop in real time, from zero to issues |
 | 7 | **CTA**: install Claude Code + clone mattpocock/skills + run `/grill-with-docs` tonight on one thing you've been putting off. | 2 min | static | Make tomorrow morning's action obvious |
 | 8 | Q&A | remainder | live | — |
+
+> **Timing risk note**: with every block live, the talk is more vulnerable to overrun than the original recorded-cases plan. Rehearse on a clean machine and time each case end-to-end; if you blow past 50 min in rehearsal, trim a case before trimming the closing.
 
 Target total: ~50 min talk + ~10 min Q&A (60 min hard cap).
 
@@ -54,7 +56,7 @@ The talk has been telling the audience for 30+ minutes about "AI moves into your
 2. Clone it locally on the demo machine.
 3. Have Claude Code installed and authenticated on that machine.
 4. Have `mattpocock/skills` set up so the 4 skills are invocable: `/setup-matt-pocock-skills`, `/grill-with-docs`, `/to-prd`, `/to-issues`.
-5. Pre-record the full 4-skill arc on the **backup topic** as Plan B (see below).
+5. Pre-stage the three case demos on the same machine: clone `sunfmin/slackwiki` + have its GitHub Action tab ready; install `md-to-gdoc-tab` + have a target Google Doc bookmarked; install `system-monitor` and start it ~15 min before the talk so the dashboard already has transcripts to show.
 
 ### Live flow (18–22 min)
 
@@ -73,16 +75,19 @@ The talk has been telling the audience for 30+ minutes about "AI moves into your
 
 Use when: room doesn't volunteer in 15s / suggestion is too vague / suggestion is too narrow to produce 3+ issues / suggestion is awkward to ship as a public artifact.
 
-### Plan B (live failure)
+### Plan B (live failure) — narrate from artifacts
 
-Pre-record the **full** setup → grill → to-prd → to-issues run on the backup topic. Keep it cued in a hidden tab as a single video.
+No recordings. If a live demo hangs, breaks, or produces unusable output, fall back to the **already-public artifact** that proves the same point, and narrate over it:
 
-Switch triggers (any of):
-- Any single skill hangs >60s with no visible progress.
-- A skill produces output that would embarrass (offensive, off-topic, broken).
-- The audience-supplied topic clearly can't survive going public on `sunfmin/coe-may-demo`.
+| Block | Live failure | Fallback artifact |
+|---|---|---|
+| 1 (split-screen opener) | The trigger fails / chat tab won't load | Open `github.com/sunfmin/slackwiki/wiki` directly, walk the markdown, then `git log` — the artifact alone tells the story |
+| 3 (Case 1 slackwiki) | Browser/terminal slow, can't navigate | Skip to the next slide (the `GitLog` component already shows real commits with v-click reveals) |
+| 4 (Case 2 md-to-gdoc-tab) | `mds` errors, network drops, OAuth times out | Open a Google Doc you previously synced with the skill; walk the tab structure to show the output shape |
+| 5 (Case 3 system-monitor) | Dashboard won't open, transcription stalls | Stay on the architecture slide and read the diagram aloud — the punchline ("Claude wrote this Swift binary") doesn't need the live dashboard |
+| 6 (closing 4-skill arc) | Any single skill hangs >60s, embarrasses, or the audience topic can't survive going public | Switch to the backup topic mid-run ("the room was quiet — here's the one I prepped"). If that also breaks, abandon the demo and walk a pre-existing repo where the same 4 skills produced their output. Don't apologize. |
 
-Switch narration: "OK, while that's churning — here's one I ran the day before this talk on a topic I knew would land well." Don't apologize. Play the recording. Resume narrative.
+Universal narration when something breaks: "OK, while that's churning — let's look at one I ran earlier." Then switch to the artifact. Resume narrative.
 
 ## Q&A: 3 planted questions
 
@@ -108,8 +113,8 @@ Used if the room is shy. Ask them aloud yourself as "a question I get a lot is�
 | Closing punchline | LIVE 4-skill arc in fresh empty `sunfmin/coe-may-demo`: `/setup-matt-pocock-skills` → `/grill-with-docs` → `/to-prd` → `/to-issues` |
 | Demo repo | `sunfmin/coe-may-demo` (public, personal namespace, pre-created empty before talk) |
 | Topic for closing demo | Audience-sourced + pocket backup (training feedback + after-actions) |
-| Live/recorded mix | Only closing is LIVE; everything else recorded/static |
-| Plan B for live failure | Pre-recorded full 4-skill closing run on backup topic, cued in hidden tab; switch if hang >60s |
+| Live/recorded mix | **All demos LIVE** (opener, 3 cases, closing). No recordings. |
+| Plan B for live failure | Narrate from already-public artifacts (wiki repo, synced Google Doc, architecture slide). For closing block: switch to backup topic mid-run, then to a pre-existing skills repo if that also breaks. |
 | CTA | Install Claude Code + clone mattpocock/skills + run `/grill-with-docs` tonight |
 | Slide language | English primary, CN gloss on key concepts |
 | Q&A plants | 3 plants — non-engineer / engineer / leadership |
@@ -117,8 +122,7 @@ Used if the room is shy. Ask them aloud yourself as "a question I get a lot is�
 ## Next steps (post-outline)
 
 1. **Pre-create `sunfmin/coe-may-demo`** as public, empty, zero commits (do this manually before the talk; not done yet).
-2. Storyboard each block — slide-by-slide, exact text, exact terminal output to show.
-3. Record the 3 case demo videos (slackwiki, md-to-gdoc-tab, system-monitor) at the right pacing.
-4. Pre-record the Plan B closing run — full 4-skill arc on backup topic, ~15–18 min single video.
-5. Rehearse the live closing 3× minimum on a clean machine, in the cloned empty `sunfmin/coe-may-demo`. Reset the repo to empty between rehearsals (`git push --force` an empty branch is the simplest reset).
-6. Build the slide deck (Keynote / Slidev / etc — TBD).
+2. Storyboard each block — slide-by-slide, exact text, exact terminal output to show. ✅ done (22 slides built in Slidev).
+3. Pre-stage all three case demos on the talk machine — installed, authenticated, bookmarks ready, system-monitor pre-started. See Pre-talk prep above.
+4. Rehearse the **full talk** (not just the closing) 3× minimum on a clean machine. Time each block. If you blow past 50 min, trim a case before trimming the closing. Reset `sunfmin/coe-may-demo` to empty between rehearsals (`git push --force` an empty branch is the simplest reset).
+5. Walk the deck once with a stranger / a non-engineer in the room — flag any slide they don't understand on first read.
