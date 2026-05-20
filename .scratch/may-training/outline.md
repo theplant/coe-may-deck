@@ -27,11 +27,11 @@ Everything else is evidence for this.
 | 3 | **Case 1 — slackwiki (headline)**: walk through what it does, then open the `sunfmin/slackwiki` git log and read 4–5 Claude-coauthored commit messages aloud. Punchline: "the AI's reasoning, the trade-offs, the failed attempts — all here, forever." | 10 min | recorded terminal + screenshots | Proves: AI in CLI + Git history + collab |
 | 4 | **Case 2 — md-to-gdoc-tab**: chat-room artifact → Google Doc tab, idempotent. Most relatable for PM/ops. | 4 min | recorded | Proves: AI output goes back into everyday tools |
 | 5 | **Case 3 — system-monitor**: skill that records screen + audio, transcribes via whisper.cpp, then Claude summarizes every 3 min. Punchline: "Claude didn't just glue tools together — it wrote the Swift binary that uses ScreenCaptureKit + whisper.cpp's C API with Metal GPU." | 6 min | recorded dashboard clip + architecture diagram | Proves: AI builds the missing tools, not just integrates existing ones |
-| 6 | **Closing punchline — mattpocock/skills LIVE**: take an audience-suggested one-liner → run `/to-prd` → run `/to-issues` → show PRD committed to `theplant/coe-may-deck` + GitHub Issues created. Backup topic in pocket: "May training follow-up — feedback questionnaire + 4 after-action items." | 10–12 min | **LIVE** | Proves: AI capabilities are a versioned team asset; closes the loop in real time |
+| 6 | **Closing punchline — mattpocock/skills LIVE**: take an audience-suggested one-liner → run all 4 skills end-to-end in a fresh empty repo `sunfmin/coe-may-demo`: **`/setup-matt-pocock-skills`** (scaffold CLAUDE.md + docs/agents/) → **`/grill-with-docs`** (interview the audience-sourced one-liner into something substantive) → **`/to-prd`** (produce PRD.md) → **`/to-issues`** (create real GitHub Issues). Backup topic: "May training follow-up — feedback questionnaire + 4 after-action items." | 18–22 min | **LIVE** | Proves: AI capabilities are a versioned team asset; closes the loop in real time, from zero to issues |
 | 7 | **CTA**: install Claude Code + clone mattpocock/skills + run `/grill-with-docs` tonight on one thing you've been putting off. | 2 min | static | Make tomorrow morning's action obvious |
 | 8 | Q&A | remainder | live | — |
 
-Target total: ~45 min talk + ~10 min Q&A.
+Target total: ~50 min talk + ~10 min Q&A (60 min hard cap).
 
 ## Bilateral structure: every case must hit both audiences
 
@@ -46,30 +46,43 @@ If a case loses one of the two during storyboarding, replace it.
 
 ### The drama
 
-The talk has been telling the audience for 30+ minutes about "AI moves into your working environment." Block 6 makes it happen in front of them, in a repo (`theplant/coe-may-deck`) that they can verify after they leave.
+The talk has been telling the audience for 30+ minutes about "AI moves into your working environment." Block 6 makes it happen in front of them — starting from a **truly empty Git repo** (`sunfmin/coe-may-demo`, pre-created public, zero commits) and ending with a fully scaffolded repo plus a PRD and tracked GitHub Issues, all from one audience-supplied sentence.
 
-### Flow
+### Pre-talk prep (do this once, days before)
 
-1. Ask the room: "Give me one sentence — something you'd want to build, propose, or improve."
-2. Pick a reasonable suggestion (or pull backup if none / weird).
-3. Run `/to-prd "<that sentence>"` in Claude Code, in the `theplant/coe-may-deck` clone. Narrate what it's doing.
-4. Show the PRD it produces. Read 2–3 highlights aloud.
-5. Run `/to-issues` on that PRD. It creates real GitHub Issues in `theplant/coe-may-deck`.
-6. Switch to a browser tab → refresh `github.com/theplant/coe-may-deck/issues` → "these are real, you can look at them after this talk."
+1. Pre-create `sunfmin/coe-may-demo` as public, empty, no README, no commits.
+2. Clone it locally on the demo machine.
+3. Have Claude Code installed and authenticated on that machine.
+4. Have `mattpocock/skills` set up so the 4 skills are invocable: `/setup-matt-pocock-skills`, `/grill-with-docs`, `/to-prd`, `/to-issues`.
+5. Pre-record the full 4-skill arc on the **backup topic** as Plan B (see below).
+
+### Live flow (18–22 min)
+
+1. **(30s)** Open a terminal in the cloned empty repo. Show `ls -la` — nothing but `.git`. Show `gh browse` proving the repo is empty on GitHub too.
+2. **(15s)** Ask the room: "Give me one sentence — something you'd want to build, propose, or improve at work."
+3. **(15s)** Pick a reasonable suggestion. Repeat it back clearly so everyone hears. If none / weird, deploy backup (see below) with no apology.
+4. **(~2 min) /setup-matt-pocock-skills** — narrate as it asks the 1 question (CLAUDE.md vs AGENTS.md), pick CLAUDE.md. Show `CLAUDE.md` and `docs/agents/` files appearing. Commit + push. Now the repo has its first commit live in front of the audience.
+5. **(~6–8 min) /grill-with-docs "<that sentence>"** — let the skill interview live. Narrate while it thinks. Pick options when it asks. The audience sees the AI sharpening a vague idea into specifics. End with `.scratch/<feature>/glossary.md` + `outline.md` committed.
+6. **(~3–4 min) /to-prd** — produce `PRD.md`. Read 2–3 highlights aloud. Commit + push.
+7. **(~3–4 min) /to-issues** — generate real GitHub Issues. Switch to browser tab → refresh `github.com/sunfmin/coe-may-demo/issues` → "these are real. You can open them after this talk."
+8. **(~30s)** Final beat: `git log --oneline` — show the entire arc of commits live. "Twenty minutes ago this repo was empty. Now there's a glossary, a PRD, and 5 tracked issues. The AI's reasoning is in the commits, forever."
 
 ### Backup topic (pocket)
 
 > **"After-action items for the May CoE training itself — send a feedback questionnaire, identify the people most likely to try it, schedule pairing sessions, schedule a 30-day check-in."**
 
-Use when: room doesn't volunteer in 15s / suggestion is too vague / suggestion is too narrow to produce 3+ issues.
+Use when: room doesn't volunteer in 15s / suggestion is too vague / suggestion is too narrow to produce 3+ issues / suggestion is awkward to ship as a public artifact.
 
 ### Plan B (live failure)
 
-Pre-record the **full** /to-prd → /to-issues run on the backup topic ahead of time. Keep it cued in a hidden tab.
+Pre-record the **full** setup → grill → to-prd → to-issues run on the backup topic. Keep it cued in a hidden tab as a single video.
 
-Switch trigger: if any single step hangs >60s OR produces something that would embarrass.
+Switch triggers (any of):
+- Any single skill hangs >60s with no visible progress.
+- A skill produces output that would embarrass (offensive, off-topic, broken).
+- The audience-supplied topic clearly can't survive going public on `sunfmin/coe-may-demo`.
 
-Switch narration: "OK, while that's churning — here's one I ran 20 minutes before this talk." Don't apologize. Play the recording. Resume narrative.
+Switch narration: "OK, while that's churning — here's one I ran the day before this talk on a topic I knew would land well." Don't apologize. Play the recording. Resume narrative.
 
 ## Q&A: 3 planted questions
 
@@ -92,18 +105,20 @@ Used if the room is shy. Ask them aloud yourself as "a question I get a lot is�
 | Opening hook | Side-by-side comparison (slackwiki task), recorded |
 | Reassurance placement | One slide right after opening |
 | Case selection | slackwiki (headline), md-to-gdoc-tab, system-monitor |
-| Closing punchline | `/to-prd → /to-issues` LIVE in `theplant/coe-may-deck` |
+| Closing punchline | LIVE 4-skill arc in fresh empty `sunfmin/coe-may-demo`: `/setup-matt-pocock-skills` → `/grill-with-docs` → `/to-prd` → `/to-issues` |
+| Demo repo | `sunfmin/coe-may-demo` (public, personal namespace, pre-created empty before talk) |
 | Topic for closing demo | Audience-sourced + pocket backup (training feedback + after-actions) |
 | Live/recorded mix | Only closing is LIVE; everything else recorded/static |
-| Plan B for live failure | Pre-recorded full closing run on backup topic, cued in hidden tab; switch if hang >60s |
+| Plan B for live failure | Pre-recorded full 4-skill closing run on backup topic, cued in hidden tab; switch if hang >60s |
 | CTA | Install Claude Code + clone mattpocock/skills + run `/grill-with-docs` tonight |
 | Slide language | English primary, CN gloss on key concepts |
 | Q&A plants | 3 plants — non-engineer / engineer / leadership |
 
 ## Next steps (post-outline)
 
-1. Storyboard each block — slide-by-slide, exact text, exact terminal output to show.
-2. Record the 3 case demo videos (slackwiki, md-to-gdoc-tab, system-monitor) at the right pacing.
-3. Pre-record the Plan B closing run with backup topic.
-4. Rehearse the live closing 3× minimum on a clean machine.
-5. Build the slide deck (Keynote / Slidev / etc — TBD).
+1. **Pre-create `sunfmin/coe-may-demo`** as public, empty, zero commits (do this manually before the talk; not done yet).
+2. Storyboard each block — slide-by-slide, exact text, exact terminal output to show.
+3. Record the 3 case demo videos (slackwiki, md-to-gdoc-tab, system-monitor) at the right pacing.
+4. Pre-record the Plan B closing run — full 4-skill arc on backup topic, ~15–18 min single video.
+5. Rehearse the live closing 3× minimum on a clean machine, in the cloned empty `sunfmin/coe-may-demo`. Reset the repo to empty between rehearsals (`git push --force` an empty branch is the simplest reset).
+6. Build the slide deck (Keynote / Slidev / etc — TBD).
