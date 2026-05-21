@@ -343,6 +343,100 @@ Pause on the slash-through on the right column — emphasize "these are walls, n
 
 ---
 layout: default
+title: decoder — chat vs agent
+class: decoder-slide
+---
+
+<div class="eyebrow-top">decoder · 对照表</div>
+
+<h1 class="decoder-headline">
+  Assistants answer questions.<br/>
+  Agents <span class="rust">complete tasks.</span>
+</h1>
+
+<div class="decoder-cn">助手回答问题。智能体完成任务。</div>
+
+<div class="decoder-table-wrap" v-pre>
+<pre class="decoder-table">                  chat            agent
+─────────────────────────────────────────────────────────────────
+input             questions       goals
+state             session         repo
+output            text            files · commits · PRs
+memory            window          CLAUDE.md · .scratch · docs/adr
+speed             seconds         minutes (because it's working)</pre>
+</div>
+
+<div class="decoder-footnote">
+  hold this picture for the next 40 minutes.
+</div>
+
+<style>
+.decoder-slide { padding: 2.6rem 4rem 1.8rem; display: flex; flex-direction: column; }
+.decoder-slide .eyebrow-top {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+  margin-bottom: 1.4rem;
+}
+.decoder-slide .decoder-headline {
+  font-family: var(--f-display) !important;
+  font-weight: 700 !important;
+  font-size: 2.6rem !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--c-ink);
+  margin: 0 !important;
+}
+.decoder-slide .decoder-headline .rust { color: var(--c-rust); }
+.decoder-slide .decoder-cn {
+  margin-top: 0.8rem;
+  font-family: var(--f-display-cn);
+  font-size: 1.2rem;
+  color: var(--c-ink-soft);
+  letter-spacing: 0.02em;
+}
+.decoder-slide .decoder-table-wrap {
+  margin-top: 2rem;
+}
+.decoder-slide .decoder-table {
+  font-family: var(--f-mono) !important;
+  font-size: 1.0rem !important;
+  line-height: 1.7 !important;
+  color: var(--c-ink) !important;
+  background: var(--c-paper-warm) !important;
+  border: 1px solid var(--c-rule) !important;
+  border-radius: 6px;
+  padding: 1.3rem 1.6rem !important;
+  margin: 0;
+  white-space: pre;
+  overflow: visible;
+}
+.decoder-slide .decoder-footnote {
+  margin-top: 1.6rem;
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  color: var(--c-ink-mute);
+  letter-spacing: 0.01em;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--c-rule);
+}
+</style>
+
+<!--
+DECODER — the audience's reference card for the next 40 minutes.
+Beat 1: "One more thing before any code.
+Assistants answer questions. Agents complete tasks."
+(Pause. Read CN aloud.)
+Beat 2: walk DOWN the five rows. Don't explain each one — the audience can read mono fonts.
+Beat 3: on the SPEED row, small pause — "yes, minutes. Because it's actually doing the work."
+Beat 4: "Hold this picture. I'll come back to it twice."
+Transitions into Block A — git log / history.
+-->
+
+---
+layout: default
 title: demo A cue — git log
 class: demo-cue-slide
 ---
