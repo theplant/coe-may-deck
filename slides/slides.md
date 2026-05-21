@@ -1281,52 +1281,120 @@ audience watching Claude *generate* — don't dictate the content yourself.
 
 ---
 layout: default
-title: demo B echo — the commit you just watched
-class: demo-echo-slide
+title: demo B echo — see the commit
+class: live-link-slide
 ---
 
-<div class="eyebrow-top">echo · sunfmin/coe-may-deck@HEAD · just now</div>
+<div class="eyebrow-top">echo · theplant/coe-may-deck · live link</div>
 
-<div class="commit-block" v-pre>
-  <div class="commit-meta">
-    <span class="commit-hash">commit &lt;new&gt;</span>
-    <span class="commit-author">Felix Sun &lt;sunfmin@gmail.com&gt;</span>
-    <span class="commit-fresh">90 seconds ago</span>
+<div class="live-link-body">
+  <h1 class="live-link-headline">
+    That commit is <span class="rust">real.</span><br/>
+    Click it.
+  </h1>
+
+  <div class="live-link-cn">刚才那个 commit，是真的。点开看。</div>
+
+  <a class="live-link-card"
+     href="https://github.com/theplant/coe-may-deck/commits/main"
+     target="_blank"
+     rel="noopener">
+    <span class="live-link-prompt">❯</span>
+    <span class="live-link-url">github.com/theplant/coe-may-deck/commits/main</span>
+    <span class="live-link-arrow">↗</span>
+  </a>
+
+  <div class="live-link-footnote">
+    <span class="rust">↑</span> top of the list is what Claude just pushed. <span class="cn">— 列表最上面那条就是。</span>
   </div>
-
-  <div class="commit-title">Add audience-suggested slide: &lt;topic&gt;</div>
-
-  <pre class="commit-body">Added during the May CoE training, in front of a live audience.
-The audience said: "&lt;their suggestion&gt;".
-
-Claude edited slides/slides.md, inserted a new ---slide--- block
-with a moment layout, drafted the bilingual text, and the Slidev
-dev server hot-reloaded the browser tab next to my terminal.
-
-The commit you're looking at landed about 90 seconds ago.
-It is now part of this repo's permanent history.
-
-diff --git a/slides/slides.md b/slides/slides.md
-+++++++++++++++++++++++++++  (a new ---slide--- block)</pre>
-
-  <div class="commit-coauthor">Co-Authored-By: Claude Opus 4.7 (1M context) &lt;noreply@anthropic.com&gt;</div>
 </div>
 
-<div class="echo-footnote">
-  <span class="rust">↑</span> <span class="cm-fn">git pull</span> after the talk and you can read it too. <span class="cn">— 你也可以拉下来读。</span>
-</div>
+<style>
+.live-link-slide { padding: 2.4rem 4rem 1.6rem; display: flex; flex-direction: column; height: 100%; }
+.live-link-slide .eyebrow-top {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+  margin-bottom: 1.4rem;
+}
+.live-link-slide .live-link-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 0;
+}
+.live-link-slide .live-link-headline {
+  font-family: var(--f-display) !important;
+  font-weight: 700 !important;
+  font-size: 2.8rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.025em !important;
+  color: var(--c-ink);
+  margin: 0 !important;
+}
+.live-link-slide .live-link-headline .rust { color: var(--c-rust); }
+.live-link-slide .live-link-cn {
+  margin-top: 0.9rem;
+  font-family: var(--f-display-cn);
+  font-size: 1.25rem;
+  color: var(--c-ink-soft);
+  letter-spacing: 0.02em;
+}
+.live-link-slide .live-link-card {
+  margin-top: 2.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  align-self: flex-start;
+  font-family: var(--f-mono);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--c-ink);
+  background: var(--c-paper-warm);
+  border: 1px solid var(--c-rule);
+  border-radius: 8px;
+  padding: 0.9rem 1.4rem;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+.live-link-slide .live-link-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--c-rust);
+  background: #FFFFFF;
+}
+.live-link-slide .live-link-prompt { color: var(--c-rust); font-weight: 800; }
+.live-link-slide .live-link-url { letter-spacing: 0.01em; }
+.live-link-slide .live-link-arrow { color: var(--c-rust); font-weight: 800; }
+.live-link-slide .live-link-footnote {
+  margin-top: 1.8rem;
+  font-family: var(--f-mono);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--c-ink-soft);
+}
+.live-link-slide .live-link-footnote .rust { color: var(--c-rust); font-weight: 700; margin-right: 0.3rem; }
+.live-link-slide .live-link-footnote .cn { font-family: var(--f-display-cn); color: var(--c-ink-mute); }
+</style>
 
 <!--
-DEMO B — ECHO
-Beat: "OK — switching back. That commit is permanent.
-A minute ago this deck didn't have that slide. Now it does — and that's true forever.
-Pull the repo after the talk. The reasoning is in the commit body, like every other commit
-the AI has helped me make."
-NOTE: Speaker should manually edit this slide's placeholder text after the demo to fill in:
-  - &lt;new&gt; → the actual short hash
-  - &lt;topic&gt; → the audience suggestion
-  - &lt;their suggestion&gt; → quoted verbatim
-This makes the echo feel real, not generic. If short on time, leave placeholders — punchline still lands.
+DEMO B — ECHO (live link variant)
+After Claude finishes the live commit, switch back to the deck and advance to this slide.
+The card is a real anchor: clicking it opens GitHub /commits/main in a new tab so the
+audience can see the freshly-pushed commit sitting at the top of the list. No mockups,
+no placeholders — the proof is one click away.
+
+Beat 1: read the headline slow. EN, CN.
+  "That commit is real. Click it."
+  "刚才那个 commit，是真的。点开看。"
+Beat 2: actually click it during the talk. New tab opens, GitHub commits page loads,
+  the top entry is the one Claude just made. Point at it.
+  "Top of the list. Authored by me, co-authored by Claude. Permanent."
+Beat 3: back to the slide. The footnote reinforces:
+  "Top of the list is what Claude just pushed."
+Pause. End of Block B.
 -->
 
 ---
@@ -1335,37 +1403,37 @@ title: artifacts — every format
 class: artifacts-slide
 ---
 
-<div class="eyebrow-top">成果 · artifacts in every format</div>
+<div class="eyebrow-top">成果 · text it edits · binary it builds</div>
 
 <div class="artifacts-leadin">
-  Status updates and bedtime stories — sure.<br/>
-  <span class="cn">周报、release notes、睡前故事——当然。</span>
+  AI can't open a .pptx. It can't directly edit a .pdf.<br/>
+  <span class="cn">AI 打不开 .pptx，也改不动 .pdf。</span>
 </div>
 
 <h1 class="artifacts-headline">
-  The same loop also writes <span class="rust">file formats</span><br/>
-  you didn't think AI could touch.
+  But the <span class="rust">recipe is text</span> —<br/>
+  and the same loop writes recipes for any file.
 </h1>
 
-<div class="artifacts-cn">同一个循环，也能写你以为 AI 写不了的文件格式。</div>
+<div class="artifacts-cn">可是配方是文本。同一个循环，也能写出任何文件的配方。</div>
 
 <div class="artifacts-grid-wrap">
-<pre class="artifacts-grid">  EVERYDAY                          UNEXPECTED
+<pre class="artifacts-grid">  AI EDITS DIRECTLY · text          TOOLS BUILD · binary
   ──────────                        ──────────
-  a slide deck <span class="fmt">.pptx</span>                a 3D-printable phone stand <span class="fmt">.stl</span>
-  a Mac or iOS app <span class="fmt">.app</span>             a KiCad PCB schematic <span class="fmt">.kicad_sch</span>
-  a personal website <span class="fmt">.html</span>          a CNC toolpath for a part <span class="fmt">.gcode</span>
-  a quarterly report <span class="fmt">.pdf</span>           a podcast with intro music <span class="fmt">.mp3</span>
-  an XLSX with live formulas <span class="fmt">.xlsx</span>  a tutorial video with narration <span class="fmt">.mp4</span></pre>
+  this very deck <span class="fmt">slides.md</span>          a slide deck <span class="fmt">.pptx</span>
+  agent memory <span class="fmt">CLAUDE.md</span>            a Word doc <span class="fmt">.docx</span>
+  source code <span class="fmt">.ts</span> <span class="fmt">.py</span>                 a quarterly report <span class="fmt">.pdf</span>
+  an OpenSCAD recipe <span class="fmt">.scad</span>          an XLSX with live formulas <span class="fmt">.xlsx</span>
+  config &amp; shell <span class="fmt">.yml</span> <span class="fmt">.sh</span>            a 3D-printable phone stand <span class="fmt">.stl</span></pre>
 </div>
 
 <div class="artifacts-footnote">
-  <span class="rust">AI writes the text.</span> The tool builds the file.<br/>
-  <span class="cn">AI 写文本，工具生成文件。</span>
+  <span class="rust">AI writes the recipe.</span> The tool builds the file.<br/>
+  <span class="cn">AI 写配方，工具生成文件。</span>
 </div>
 
 <style>
-.artifacts-slide { padding: 1.8rem 4rem 1.2rem; display: flex; flex-direction: column; }
+.artifacts-slide { padding: 1.4rem 4rem 0.8rem; display: flex; flex-direction: column; }
 .artifacts-slide .eyebrow-top {
   font-family: var(--f-mono);
   font-size: 0.78rem;
@@ -1409,13 +1477,13 @@ class: artifacts-slide
 }
 .artifacts-slide .artifacts-grid {
   font-family: var(--f-mono) !important;
-  font-size: 0.92rem !important;
-  line-height: 1.65 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.55 !important;
   color: var(--c-ink) !important;
   background: var(--c-paper-warm) !important;
   border: 1px solid var(--c-rule) !important;
   border-radius: 6px;
-  padding: 1rem 1.4rem !important;
+  padding: 0.8rem 1.3rem !important;
   margin: 0;
   white-space: pre;
   overflow: visible;
@@ -1425,13 +1493,13 @@ class: artifacts-slide
   font-weight: 700;
 }
 .artifacts-slide .artifacts-footnote {
-  margin-top: 1rem;
+  margin-top: 0.7rem;
   font-family: var(--f-mono);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: var(--c-ink-soft);
   letter-spacing: 0.01em;
-  padding-top: 0.8rem;
+  padding-top: 0.55rem;
   border-top: 1px solid var(--c-rule);
 }
 .artifacts-slide .artifacts-footnote .rust {
@@ -1445,37 +1513,33 @@ class: artifacts-slide
 </style>
 
 <!--
-ARTIFACTS · EVERY FORMAT — challenge the audience's assumption that AI is
-"just for text." Show file formats they didn't think AI could touch:
-STL, PPTX, XLSX, KiCad, G-code. These aren't text — but their RECIPE is.
+ARTIFACTS · TEXT vs BINARY — make the editing distinction explicit.
 
-The slide pivots from "AI helps with the obvious markdown stuff" to "AI's
-real reach is into binary formats via text-first generators."
+Two columns. Two different mechanisms.
+  LEFT  — AI edits the file directly: markdown, source code, configs, OpenSCAD,
+          even this deck (slides.md) and its own memory (CLAUDE.md). Plain text in,
+          plain text out, AI is the editor.
+  RIGHT — AI cannot edit the file at all: .pptx, .docx, .pdf, .xlsx, .stl are
+          binary. AI writes the *recipe* (python-pptx code, an OpenSCAD .scad,
+          a LaTeX source, openpyxl calls) and a tool builds the binary.
 
-Beat 1: read the lead-in as concession, almost throwaway.
-  "Yes — AI writes status updates, release notes, bedtime stories.
-   You already know that."
-Beat 2: pause. then the headline, slower:
-  "But the same loop also writes file formats you didn't think AI could
-   touch."
-Beat 3: walk the grid in TWO passes.
-  LEFT (EVERYDAY): point to the SLIDE DECK row first — "yes, like the one
-   you're looking at right now." (Audience just watched Demo B prove this.)
-   Then Mac app (point at the system-monitor repo from Demo A), website,
-   PDF report, XLSX with live formulas.
-  RIGHT (UNEXPECTED): pick 2-3 surprising ones.
-   Engineer-leaning room: emphasize KiCad, G-code, CNC.
-   Non-engineer room: emphasize STL, podcast audio, tutorial video.
-   "An STL file for your 3D printer. A KiCad schematic for a circuit
-    board. G-code for a CNC machine. A podcast with intro music. A
-    tutorial video with narration. None of these are markdown."
-Beat 4: the closing principle, slow:
-  "AI writes the text. The tool builds the file."
-  This reinforces the agentic REPL (slide 6) — AI calls tools (OpenSCAD,
-  Mermaid, python-pptx, openpyxl, KiCad CLI, CAM software, LilyPond,
-  TTS APIs, ffmpeg) that take text input and emit any binary format.
-Beat 5: pause. then transition: "And here's *why* all of that works."
-Audience leans in. Goes to CLI · the door, then the OpenSCAD proof.
+Beat 1: leadin as honest concession.
+  "AI can't open a .pptx. It can't directly edit a .pdf. That's true."
+Beat 2: headline, the flip:
+  "But the recipe is text — and the same loop writes recipes for any file."
+Beat 3: walk LEFT column first, fast.
+  "Things AI edits directly: this very deck — slides.md you're looking at.
+   CLAUDE.md — its own memory. Source code. An OpenSCAD recipe. Configs and shell.
+   All plain text. AI is literally the editor."
+Beat 4: shift to RIGHT column, slower — this is the surprising part.
+  "Things AI cannot open or edit: a .pptx, a Word doc, a PDF, an XLSX,
+   a 3D-printable .stl. Binary files. But python-pptx, python-docx, weasyprint,
+   openpyxl, OpenSCAD — those are tools that take TEXT in and emit BINARY out.
+   AI writes the recipe. The tool builds the file."
+Beat 5: closing principle:
+  "AI writes the recipe. The tool builds the file."
+  Pause. Transition: "And here's *why* all of that works."
+Goes to CLI · the door, then the OpenSCAD proof.
 -->
 
 ---
@@ -1907,6 +1971,97 @@ Transitions to the e-commerce reframe trio (想象 / 推断 / 所以).
 
 ---
 layout: default
+title: why CLI — the mechanical principle
+class: why-cli-slide
+---
+
+<div class="eyebrow-top">the mechanism · 原理</div>
+
+<h1 class="why-headline">
+  LLMs output <span class="rust">text.</span><br/>
+  CLIs speak <span class="rust">text.</span>
+</h1>
+
+<div class="why-cn">LLM 的输出是 token（文字）。CLI 的接口也是文字。这是最直接的匹配。</div>
+
+<div class="why-rule"></div>
+
+<div class="why-closer">
+  GUIs need cursor, pixel, visual layout —<br/>
+  things LLMs can't see. <span class="rust">CLIs need none of that.</span><br/>
+  <span class="cn">GUI 是人类专用的翻译层。AI 不需要翻译。</span>
+</div>
+
+<style>
+.why-cli-slide { padding: 3rem 4rem; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.why-cli-slide .eyebrow-top {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+  margin-bottom: 1.6rem;
+}
+.why-cli-slide .why-headline {
+  font-family: var(--f-display) !important;
+  font-weight: 700 !important;
+  font-size: 2.4rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--c-ink);
+  margin: 0 !important;
+}
+.why-cli-slide .why-headline .rust { color: var(--c-rust); }
+.why-cli-slide .why-cn {
+  margin-top: 0.9rem;
+  font-family: var(--f-display-cn);
+  font-size: 1.25rem;
+  color: var(--c-ink-soft);
+  letter-spacing: 0.02em;
+}
+.why-cli-slide .why-rule {
+  margin-top: 2.2rem;
+  width: 4rem;
+  height: 2px;
+  background: var(--c-rust);
+  display: block;
+}
+.why-cli-slide .why-closer {
+  margin-top: 2.2rem;
+  font-family: var(--f-mono);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--c-ink);
+}
+.why-cli-slide .why-closer .rust {
+  color: var(--c-rust);
+  font-weight: 700;
+}
+.why-cli-slide .why-closer .cn {
+  font-family: var(--f-display-cn);
+  color: var(--c-ink-soft);
+}
+</style>
+
+<!--
+THE MECHANISM — why CLI is the AI-native interface.
+
+Not "CLI is cooler" — it's a mechanical fit. LLMs produce tokens (text).
+CLIs accept stdin (text) and return stdout (text). Perfect match.
+GUIs require visual perception: cursor position, pixel reading, menu
+navigation, layout parsing. LLMs have none of those affordances.
+
+Beat 1: "Let me explain WHY — not as a preference, as a mechanism."
+Beat 2: read the headline slow. "LLMs output text. CLIs speak text."
+  "This isn't a coincidence. It's the same data type."
+Beat 3: the closer. "GUIs need cursor, pixel, visual layout — things
+  LLMs literally cannot see. CLIs need none of that."
+Beat 4: CN. "GUI 是人类专用的翻译层。AI 不需要翻译。"
+Beat 5: quick cut to next → the shop owner is who we're building for.
+-->
+
+---
+layout: default
 title: 想象 · the shop owner you sell to
 class: shop-owner-slide
 ---
@@ -1941,7 +2096,7 @@ class: shop-owner-slide
 </div>
 
 <style>
-.shop-owner-slide { padding: 1.4rem 4rem 1rem; display: flex; flex-direction: column; }
+.shop-owner-slide { padding: 1.2rem 4rem 0.6rem; display: flex; flex-direction: column; }
 .shop-owner-slide .eyebrow-top {
   font-family: var(--f-mono);
   font-size: 0.78rem;
@@ -2006,12 +2161,12 @@ class: shop-owner-slide
 }
 @keyframes blink { 50% { opacity: 0; } }
 .shop-owner-slide .shop-owner-footnote {
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
   font-family: var(--f-mono);
   font-size: 0.85rem;
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--c-ink-soft);
-  padding-top: 0.7rem;
+  padding-top: 0.5rem;
   border-top: 1px solid var(--c-rule);
 }
 .shop-owner-slide .shop-owner-footnote .cn {
@@ -2289,30 +2444,42 @@ Transitions to CTA.
 
 ---
 layout: moment
-title: CTA — what to try this week
+title: what to try this week
 eyebrow: this week · 本周试试
-size: md
-cn: 这周就动手。下周一就有故事。
-footnote: github.com/sunfmin/coe-may-deck
+size: sm
+cn: 三件事，对应今天三个 demo。本周做一次。
+footnote: github.com/theplant/coe-may-deck
 ---
 
-**This week, do this:**
+<div class="cta-items">
+  <div class="cta-item"><span class="n">1</span><strong>Claude Code</strong> in your own repo.</div>
+  <div class="cta-item"><span class="n">2</span><strong>One real commit.</strong> Read the diff.</div>
+  <div class="cta-item"><span class="n">3</span>Ask: <strong>give me a CLI artifact.</strong></div>
+</div>
 
-1. Open Claude Code in a repo you know.
-2. Make one change with it. Commit.
-3. Next Monday, read that commit.
+<style>
+.cta-items { display: flex; flex-direction: column; gap: 0.45em; font-size: 2rem; line-height: 1.3; }
+.cta-item { display: block; }
+.cta-item .n { color: var(--c-rust); font-weight: 800; display: inline-block; min-width: 1.4em; }
+</style>
 
 <!--
 CTA — the actionable closer.
-Three steps. Concrete. Time-boxed to "this week."
-No grand vision. Just: try it once, and on Monday you'll have proof.
+Three steps. Each one mirrors a demo we just did:
+  1. Block A opener — "open Claude Code in a repo"
+  2. Block A echo — the "one real commit" beat
+  3. Slide 16 proof — `claude "make a phone stand"` → CLI produces the file
+No grand vision. Just: replay today, once, this week.
 
-Beat 1: read the three lines slow, like instructions.
-  "This week — open Claude Code in a repo you already know.
-   Make one change with it. Commit it.
-   Next Monday, read that commit."
+Beat 1: read the three lines slow, like instructions. Tie each back:
+  "One — open Claude Code in a repo you already maintain.
+       That's literally what we did at the start of Block A.
+   Two — have it make one real commit. Read the diff before you say y.
+       That's the Block A echo. The one real commit.
+   Three — ask it for a CLI artifact. A script, an STL, an ffmpeg line.
+       That's the OpenSCAD proof. Recipe in, artifact out, no GUI."
 Beat 2: CN, slow.
-  "这周就动手。下周一就有故事。"
+  "三件事，对应今天三个 demo。本周做一次，下周一你就有故事。"
 Beat 3: point at the footnote.
   "The repo for this deck is public. Pull it. The history IS the talk."
 Pause. End.
