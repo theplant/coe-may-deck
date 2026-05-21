@@ -43,9 +43,9 @@ defineProps({
   left: 6rem;
 }
 
-.moment-body { max-width: 30ch; }
-.size-md .moment-body { max-width: 38ch; }
-.size-sm .moment-body { max-width: 44ch; }
+.moment-body { max-width: 66rem; }
+.size-md .moment-body { max-width: 56rem; }
+.size-sm .moment-body { max-width: 44rem; }
 
 .moment-text {
   font-family: var(--f-display);

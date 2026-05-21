@@ -3,7 +3,7 @@ theme: default
 title: AI Escapes the Chatbox
 info: |
   ## AI Escapes the Chatbox / AI 走出聊天框
-  From chat sessions to versioned, team-shared capabilities.
+  Into your terminal, your files, your git log, your team.
 
   May CoE training — see ../.scratch/may-training/outline.md
 transition: fade
@@ -18,741 +18,501 @@ fonts:
   provider: none
 ---
 
-From chat sessions to versioned, team-shared capabilities.
+Into your terminal, your files, your git log, your team.
 
 <div class="cn-sans mt-3 text-[color:var(--c-ink-mute)] text-base">
-聊天会话 → 版本化的、可团队共享的能力。
+走进你的终端、你的文件、你的 git 记录、你的团队。
 </div>
 
 <!--
 TITLE — vol. 01 magazine-cover treatment
 Open beat: read title in both languages. Pause.
 "What we're going to do today is not show you a new chatbot. We're going to show
- you AI moving out of the chat window and into the place you actually work."
+ you AI moving out of the chat window — into your terminal, your files, your git log,
+ your team."
 Don't preview the agenda. The opening comparison demo IS the agenda.
 -->
 
 ---
 layout: moment
-eyebrow: setup · the wrong expectation
-cn: 今天不是介绍新的聊天 AI。
----
-
-Today is **not** about a new chat AI.
-
-<!--
-1 sentence, big pause. Set expectations against the room's default.
-"Watch this." → transition to the side-by-side comparison.
--->
-
----
-layout: moment
-eyebrow: demo · 0 / 1
-footnote: "task: summarize today's #engineering Slack channel"
-cn: 同一个任务，两种 AI 的工作方式。
-status: "live · split-screen · chat (left) vs. slackwiki (right) · ~5 min"
----
-
-Watch **this**.
-
-<!--
-Run the side-by-side LIVE (block 1 from outline). Two terminal windows
-(or screen-shared tabs) side by side on the demo machine:
-- Left: open ChatGPT / Claude.ai web — paste the prompt, let it stream
-  output into the chat. Output is trapped in the chat tab.
-- Right: trigger the slackwiki GitHub Action manually (or show
-  yesterday's run) — output lands as a commit on the wiki repo.
-
-~4–5 min. Narrate the contrast while both run.
-End on the git log of sunfmin/slackwiki — let the room read 2–3 commit
-messages on screen before moving on.
-
-If the live split-screen breaks: just open sunfmin/slackwiki in the
-browser, scroll the markdown, then open the git log. The artifact is
-the proof — the live trigger is gravy.
--->
-
----
-layout: default
-class: bg-paper
----
-
-<div class="eyebrow mb-6">what just happened</div>
-
-<h2 class="mb-8">What you just saw</h2>
-
-<v-clicks>
-
-- Left: AI's work **vanishes** when the tab closes
-- Right: AI's work **stays** — in Git, forever
-- Same model. Same prompt. **Different working environment.**
-
-</v-clicks>
-
-<div class="status-line-static mt-12">
-  <span class="prompt">❯</span>
-  <span>same model</span>
-  <span class="sep">·</span>
-  <span>different environment</span>
-  <span class="sep">·</span>
-  <span>different outcome</span>
-</div>
-
-<style scoped>
-.status-line-static {
-  font-family: var(--f-mono);
-  font-size: 0.85rem;
-  color: var(--c-ink-mute);
-  border-top: 1px solid var(--c-rule);
-  padding-top: 0.7rem;
-  display: flex;
-  gap: 0.7rem;
-  letter-spacing: 0.04em;
-}
-.status-line-static .prompt { color: var(--c-rust); font-weight: 700; }
-.status-line-static .sep { color: var(--c-rule); }
-</style>
-
-<!--
-Land the contrast. Don't list features.
-Use the word "environment" — it's our thesis word.
-Transition: "Are you telling me to abandon ChatGPT?" — next slide answers.
--->
-
----
-layout: two-cols
-class: gap-8 reassurance
----
-
-<div class="eyebrow mb-5">reassurance</div>
-
-<h2 class="mb-2">When chat AI still wins</h2>
-
-<div class="reassurance-cn mb-8">聊天式 AI 仍然胜任的场景</div>
-
-<v-clicks>
-
-- **Exploring unknowns** — "how does X work?"
-- **Brainstorming / writing** — design docs, naming, prose
-- **Idle thinking** — no artifact required
-
-</v-clicks>
-
-::right::
-
-<div v-click class="pull-quote">
-  <div class="quote-mark">"</div>
-  <div class="quote-en">
-    Don't throw away your chatbot.<br/>
-    <strong>Add agents next to it.</strong>
-  </div>
-  <div class="quote-cn">不是抛弃聊天 AI ——<br/>是在它旁边加一个 agent。</div>
-</div>
-
-<style scoped>
-.reassurance-cn {
-  font-family: var(--f-display-cn);
-  font-size: 1.15rem;
-  color: var(--c-ink-soft);
-  font-weight: 400;
-}
-.pull-quote {
-  margin-top: 6rem;
-  padding-left: 2rem;
-  border-left: 2px solid var(--c-rust);
-  max-width: 28ch;
-}
-.quote-mark {
-  font-family: var(--f-display);
-  font-size: 4rem;
-  color: var(--c-rust);
-  line-height: 0.4;
-  margin-bottom: 1.2rem;
-  font-weight: 800;
-}
-.quote-en {
-  font-family: var(--f-display);
-  font-style: italic;
-  font-size: 1.65rem;
-  color: var(--c-ink);
-  line-height: 1.3;
-  font-variation-settings: 'opsz' 144, 'SOFT' 70, 'wght' 500;
-}
-.quote-en :deep(strong) {
-  color: var(--c-rust);
-  font-weight: 700;
-  font-style: normal;
-}
-.quote-cn {
-  margin-top: 1rem;
-  font-family: var(--f-display-cn);
-  font-size: 1rem;
-  color: var(--c-ink-soft);
-  line-height: 1.5;
-}
-</style>
-
-<!--
-~90 seconds. Slow down on "no artifact required" — the defining feature of
-when chat wins. Land the quote: chat is for thinking, agent is for shipping.
-Transition: "OK. Now let me show you what 'agent' looks like in practice.
-Three real examples from my own repos."
--->
-
----
-layout: cases-overview
----
-
-<!--
-Click reveal isn't needed — the page is the agenda.
-Let the audience read all three. Then say each case slug aloud, in order.
-Move to Case 1.
--->
-
----
-layout: case-cover
-num: 1
-total: 3
-name: slackwiki
-cn: Slack 历史 → Claude → 仓库化的 wiki
-repo: sunfmin/slackwiki
-runtime: 10 min
-proves: AI in your CLI + Git + CI
----
-
-Slack → Claude Code → markdown wiki → GitHub.
-
-<!--
-Section title for Case 1. Pause. Then:
-
-  "I have a Slack workspace. Engineering channel. 200 messages a day.
-   Nobody scrolls back. Nobody remembers what was decided yesterday."
-
-(Read the room: every non-engineer just nodded.)
-
-  "Here's what I built — or rather, what Claude Code built with me,
-   every day, in the background."
-
-Run the slackwiki case LIVE: browser → github.com/sunfmin/slackwiki,
-walk the wiki/ tree, then `git log` in a local clone. ~10 min total.
-
-If the live walk drags: cut to the git log slide (next) and let the
-commit messages carry the proof.
--->
-
----
-layout: moment
-eyebrow: case 1 · bridge
+title: setup — the shape of the problem
+eyebrow: setup · the shape of the problem
 size: md
-cn: 关键不是它做了什么 —— 而是这些工作沉淀在哪里。
-status: 'next: open the git log'
+cn: 聊天框是一个窗口。你不在窗口里工作。
 ---
 
-The trick is not what it does. The trick is **where the work lives**.
+The chatbox is a window.
+
+<div class="mt-6">You don't work in one.</div>
 
 <!--
-Bridge slide. Big pause after each beat. Then advance to the git log.
+SETUP — name the limitation in one image.
+Beat 1: "The chatbox is a window." (pause, let it land)
+Beat 2: "You don't work in one." (pause again)
+Don't explain. The next 40 minutes are the explanation.
+Transitions straight into the side-by-side comparison demo.
 -->
 
 ---
 layout: default
-class: bg-paper
+title: shape — chatbox vs working environment
+class: contrast-slide
 ---
 
-<div class="gitlog-eyebrow mb-3">
-  <span class="prompt">❯</span> case 1 · the headline reveal
+<div class="eyebrow-top">before · after · 形状</div>
+
+<div class="contrast-grid">
+  <div class="panel chat-panel">
+    <div class="panel-label">chatbox</div>
+    <div class="window">
+      <div class="window-bar">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="window-title">chat</span>
+      </div>
+      <div class="window-body">
+        <div class="msg you">you: summarize today's #eng</div>
+        <div class="msg ai">AI:  here's a summary…</div>
+        <div class="msg you">you: now translate it</div>
+        <div class="msg ai">AI:  …</div>
+        <div class="msg you">you: send it to the team</div>
+        <div class="msg ai">AI:  (I can't reach Slack)</div>
+        <div class="window-prompt">› _</div>
+      </div>
+    </div>
+    <div class="panel-note">one window · session-scoped · output dies on close</div>
+  </div>
+
+  <div class="panel env-panel">
+    <div class="panel-label">your environment</div>
+    <pre class="env-tree">~/myrepo  <span class="muted">felix@mac</span>
+├── src/                     <span class="muted">— real files</span>
+├── CLAUDE.md                <span class="rust">— memory</span>
+├── .claude/skills/          <span class="rust">— capabilities</span>
+├── docs/adr/                <span class="rust">— decisions</span>
+├── .scratch/                <span class="muted">— working notes</span>
+└── .git/log                 <span class="rust">— history, forever</span>
+
+<span class="rust">❯</span> claude "summarize #eng → wiki"
+<span class="rust">❯</span> gh pr create
+<span class="rust">❯</span> ./scripts/deploy.sh
+<span class="rust">❯</span> ssh prod tail -f /var/log/app
+</pre>
+    <div class="panel-note">terminal · files · git · team · everything you already use</div>
+  </div>
 </div>
 
-<GitLog
-  repo="sunfmin/slackwiki"
-  :commits="[
-    { date: '2026-05-14', msg: 'Add CONTEXT.md + 5 ADRs; split portraits from monthly logs' },
-    { date: '2026-05-12', msg: 'Split commit (claude) from push (python); enrich fallback' },
-    { date: '2026-05-12', msg: 'Allow git commit/push in claude-settings; deny destructive' },
-    { date: '2026-05-12', msg: 'Drop --allowedTools flag; rely on prompt-level guardrails' },
-    { date: '2026-05-12', msg: 'Let Claude run git commit + push; Python verifies HEAD moved' },
-  ]"
-/>
-
-<div v-click class="punchline mt-10">
-  This is the AI <strong>thinking through trade-offs</strong>.<br/>
-  <span class="punchline-cn">这是 AI 在 <span class="kw">权衡决策</span>，被永久记下。</span>
-</div>
-
-<div v-click class="punchline-sub mt-4">
-  Forever readable. Forever revertable.
-</div>
-
-<style scoped>
-.gitlog-eyebrow {
+<style>
+.contrast-slide { padding: 3.5rem 5rem; }
+.contrast-slide .eyebrow-top {
   font-family: var(--f-mono);
   font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+  margin-bottom: 2.2rem;
+}
+.contrast-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.55fr;
+  gap: 3rem;
+  align-items: start;
+}
+.panel-label {
+  font-family: var(--f-mono);
+  font-size: 0.8rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--c-ink-mute);
+  margin-bottom: 0.7rem;
 }
-.gitlog-eyebrow .prompt { color: var(--c-rust); font-weight: 700; }
-
-.punchline {
-  font-family: var(--f-display);
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.35;
-  color: var(--c-ink);
-  font-variation-settings: 'opsz' 144, 'SOFT' 50, 'wght' 600;
-  letter-spacing: -0.015em;
-}
-.punchline :deep(strong) {
-  color: var(--c-rust);
-  font-weight: 800;
-}
-.punchline-cn {
-  display: block;
-  margin-top: 0.6rem;
-  font-family: var(--f-display-cn);
-  font-size: 1.1rem;
-  color: var(--c-ink-soft);
-  font-weight: 400;
-}
-.punchline-cn .kw { color: var(--c-rust); font-weight: 600; }
-
-.punchline-sub {
+.panel-note {
+  margin-top: 0.9rem;
   font-family: var(--f-mono);
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--c-ink-mute);
   letter-spacing: 0.02em;
 }
+
+/* Left — bounded chat window */
+.chat-panel .window {
+  background: #FFFFFF;
+  border: 1px solid var(--c-rule);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(26, 22, 17, 0.06);
+  overflow: hidden;
+  width: 100%;
+  max-width: 22rem;
+}
+.window-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.8rem;
+  background: #EBE3D0;
+  border-bottom: 1px solid var(--c-rule);
+}
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.dot-red    { background: #E07A2D; }
+.dot-yellow { background: #E8C547; }
+.dot-green  { background: #5B7A6F; }
+.window-title {
+  margin-left: 0.5rem;
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  color: var(--c-ink-mute);
+}
+.window-body {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--c-ink);
+  padding: 0.9rem 1rem 1.2rem;
+}
+.msg.you { color: var(--c-ink); }
+.msg.ai  { color: var(--c-ink-soft); }
+.window-prompt {
+  margin-top: 0.8rem;
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  color: var(--c-rust);
+}
+
+/* Right — open environment */
+.env-panel .env-tree {
+  font-family: var(--f-mono);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #F4EFE3 !important;
+  background: #1A1611 !important;
+  border: 1px solid #2A2418 !important;
+  padding: 1.4rem 1.6rem !important;
+  border-radius: 6px;
+  margin: 0;
+  white-space: pre;
+  overflow: visible;
+}
+.env-tree .muted { color: rgba(244, 239, 227, 0.45); }
+.env-tree .rust  { color: var(--c-rust); font-weight: 700; }
 </style>
 
 <!--
-Click through commit messages one at a time. Read each aloud in plain language.
-Then click to the closing line. Bridge: "Chat AI can't give you this. Case 2."
--->
-
----
-layout: case-cover
-num: 2
-total: 3
-name: md-to-gdoc-tab
-cn: 本地 markdown → Google Doc 某个 tab（幂等）
-repo: sunfmin/md-to-gdoc-tab
-runtime: 4 min
-proves: AI's output reaches your everyday tools
-bg: sage
----
-
-Chat artifacts → Google Doc tabs, idempotent.
-
-<!--
-Section title for Case 2. Frame:
-  "You finish a chat session. You have a markdown draft. But your PM lives
-   in Google Docs. Your designer lives in Google Docs. Your stakeholders
-   live in Google Docs. The chat output is stuck."
--->
-
----
-layout: moment
-eyebrow: case 2 · the gap
-size: md
-bg: sage
-cn: 你的 markdown 在聊天里 —— 但你团队读的是 Google Docs。
----
-
-The artifact is **here**.<br/>
-Your team reads it **there**.
-
-<!--
-Land the gap. Everyone in the room — engineer or not — knows this gap.
-Then transition: "Here's the boring, beautiful answer."
--->
-
----
-layout: moment
-eyebrow: case 2 · demo
-size: md
-bg: sage
-footnote: "command: mds README.md gdoc:1Ab…/PRD"
-status: "live · md-to-gdoc-tab · ~3 min"
-cn: 一条命令。同步到指定的 tab。可反复跑、不改坏。
----
-
-One **command**. One **tab**. **Idempotent**.
-
-<!--
-Run it LIVE: edit a markdown file locally → `mds` → switch to the
-Google Doc tab in the browser → refresh. Run again → no change. Edit
-the markdown → run again → just the diff lands.
-
-If the live run breaks: open the already-synced Google Doc and walk
-the tab structure — that artifact alone proves the case.
-
-Punchline (verbal):
-  "AI doesn't have to escape the chat window through Git. It can also
-   escape through your team's everyday tools — Docs, Sheets, Notion,
-   Slack canvases. Wherever the team already lives."
--->
-
----
-layout: moment
-eyebrow: case 2 · landing
-size: md
-cn: AI 的稿子 → 直接落到团队每天看的地方。
-status: 'next: case 3 — system-monitor'
----
-
-AI's draft lands **where the team already lives**.
-
-<!--
-Quick beat. Then advance to Case 3.
--->
-
----
-layout: case-cover
-num: 3
-total: 3
-name: system-monitor
-cn: 屏幕 + 系统音频 → whisper.cpp 转录 → Claude 每 3 分钟概括
-repo: sunfmin/system-monitor
-runtime: 6 min
-proves: AI builds the missing tools
-bg: blue
----
-
-Screen + audio → whisper.cpp → Claude reads & summarizes.
-
-<!--
-Frame:
-  "You're in a Zoom. Two hours later you have nothing — no transcript,
-   no summary, no record of what was decided. Sound familiar?"
-
-  "Now: a Claude Code skill that watches your screen and listens to the
-   system audio. Transcribes in real time with whisper.cpp on Metal GPU.
-   Every 3 minutes, Claude reads the screenshots + transcripts and writes
-   a running summary."
-
-  "Here's what's wild. Look at the architecture."
+CONTRAST — the visual thesis before any demo.
+Beat: "Left: what a chatbox is — one window, text in, text out, dies on close.
+Right: what 'work' is — your terminal, your files, your git log, your team.
+The talk for the next 40 minutes is about moving the AI from the left side to the right side."
+Don't read the labels aloud. Let the picture do it.
 -->
 
 ---
 layout: default
-class: bg-blue
+title: principle — AI works with plain text
+class: principle-slide
 ---
 
-<div class="arch-eyebrow mb-3">
-  <span class="prompt">❯</span> case 3 · the architecture
+<div class="eyebrow-top">principle · 原则</div>
+
+<h1 class="principle-headline">AI works with<br/>what it can <span class="rust">read.</span></h1>
+
+<div class="principle-cn">AI 喜欢它能读懂的东西。</div>
+
+<div class="principle-yes" v-pre>
+  <span class="yes-label">— it reads</span>
+  plain text · markdown · code · JSON · YAML · shell pipes
+  · git diffs · commit messages · <span class="emph">images / screenshots</span>
 </div>
 
-<div class="arch-card">
-
-```text
-ScreenCaptureKit ──► whisper.cpp C API (Metal GPU)
-                            │
-                  ┌─────────┴──────────┐
-                  │                    │
-            2s partials           20s finals
-          (streaming text)     (full sentences)
-                  │                    │
-                  └────────┬───────────┘
-                           │
-                   WebSocket push :8421
-                           ▼
-                   Live web dashboard
-                           ▼
-              Claude reads + summarizes every 3 min
-```
-
+<div class="principle-no" v-pre>
+  <span class="no-label">— it can't</span>
+  Word · Excel · PowerPoint · Sketch · Figma · proprietary GUIs · binary blobs
 </div>
 
-<div v-click class="arch-callout mt-8">
-  This binary — <code>stream-audio-whisper</code> — is <strong>Swift</strong>.<br/>
-  <span class="arch-cn">这个二进制是 <strong>Claude 写的</strong>。</span>
+<div class="principle-bridge" v-pre>
+  <span class="bridge-label">→ but</span>
+  convert any of those to text or a screenshot,
+  and AI can read it again.
 </div>
 
-<style scoped>
-.arch-eyebrow {
+<div class="principle-footnote">
+  the chatbox blocks all of this.<br/>the terminal lets all of it in.
+</div>
+
+<style>
+.principle-slide { padding: 2.6rem 4rem 1.8rem; display: flex; flex-direction: column; }
+.principle-slide .eyebrow-top {
   font-family: var(--f-mono);
   font-size: 0.78rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--c-ink-mute);
+  margin-bottom: 1.4rem;
 }
-.arch-eyebrow .prompt { color: var(--c-dusty); font-weight: 700; }
-
-.arch-card :deep(pre) {
-  background: rgba(255, 255, 255, 0.5) !important;
-  border: 1px solid rgba(79, 102, 120, 0.25) !important;
-  font-size: 0.78rem !important;
-  line-height: 1.35 !important;
-  padding: 1rem 1.4rem !important;
+.principle-slide .principle-headline {
+  font-family: var(--f-display) !important;
+  font-weight: 700 !important;
+  font-size: 2.8rem !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--c-ink);
   margin: 0 !important;
 }
-
-.arch-callout {
-  font-family: var(--f-display);
-  font-size: 1.7rem;
-  font-weight: 600;
-  line-height: 1.35;
-  color: var(--c-ink);
-  font-variation-settings: 'opsz' 144, 'SOFT' 50;
-  letter-spacing: -0.01em;
-}
-.arch-callout :deep(strong) {
-  color: var(--c-dusty);
-  font-weight: 800;
-}
-.arch-callout :deep(code) {
-  font-family: var(--f-mono);
-  font-size: 0.9em;
-  background: rgba(79, 102, 120, 0.12);
-  color: var(--c-ink);
-  padding: 0.05em 0.4em;
-  border-radius: 3px;
-  border: 1px solid rgba(79, 102, 120, 0.2);
-}
-.arch-cn {
-  display: block;
-  margin-top: 0.5rem;
+.principle-slide .principle-headline .rust { color: var(--c-rust); }
+.principle-slide .principle-cn {
+  margin-top: 0.8rem;
   font-family: var(--f-display-cn);
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   color: var(--c-ink-soft);
-  font-weight: 400;
+  letter-spacing: 0.02em;
 }
-.arch-cn :deep(strong) {
-  color: var(--c-dusty);
+.principle-slide .principle-yes {
+  margin-top: 1.8rem;
+  font-family: var(--f-mono);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--c-ink);
+  max-width: 58rem;
+}
+.principle-slide .principle-yes .yes-label {
+  display: inline-block;
+  color: var(--c-rust);
+  font-weight: 700;
+  margin-right: 0.5rem;
+  letter-spacing: 0.01em;
+}
+.principle-slide .principle-no {
+  margin-top: 1rem;
+  font-family: var(--f-mono);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--c-ink-mute);
+  max-width: 58rem;
+  text-decoration: line-through;
+  text-decoration-color: rgba(138, 128, 115, 0.4);
+}
+.principle-slide .principle-no .no-label {
+  display: inline-block;
+  color: var(--c-ink-soft);
+  font-weight: 700;
+  margin-right: 0.5rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+.principle-slide .principle-yes .emph {
+  color: var(--c-rust);
   font-weight: 600;
+}
+.principle-slide .principle-bridge {
+  margin-top: 1rem;
+  font-family: var(--f-mono);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--c-ink-soft);
+  max-width: 58rem;
+  font-style: italic;
+}
+.principle-slide .principle-bridge .bridge-label {
+  display: inline-block;
+  color: var(--c-rust);
+  font-weight: 700;
+  margin-right: 0.5rem;
+  letter-spacing: 0.01em;
+  font-style: normal;
+}
+.principle-slide .principle-footnote {
+  margin-top: 1.6rem;
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  color: var(--c-ink-mute);
+  letter-spacing: 0.01em;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--c-rule);
+  line-height: 1.6;
 }
 </style>
 
 <!--
-Walk the diagram top to bottom:
-  - ScreenCaptureKit is Apple's screen+audio framework.
-  - whisper.cpp transcribes via C API, accelerated on Metal GPU.
-  - Two cadences: 2s partials for streaming subtitles, 20s finals with
-    punctuation and sentence segmentation.
-  - WebSocket pushes to a local dashboard. Claude reads the screenshots
-    + transcripts every 3 min and writes a summary.
-
-THEN click to reveal the punchline:
-  "This binary — stream-audio-whisper — is Swift. Claude wrote it."
-  
-Pause. Repeat in plain language:
-  "Claude didn't import a library. It wrote a Swift program that calls
-   ScreenCaptureKit and pipes audio into whisper.cpp's C API with Metal.
-   It built the missing tool."
--->
-
----
-layout: moment
-eyebrow: case 3 · landing
-size: md
-cn: AI 不只是用工具 —— 它还会造工具。
-status: 'three cases · one more thing'
----
-
-AI doesn't just **use** tools.<br/>
-AI **builds** them.
-
-<!--
-Big pause. Land the escalation:
-  Case 1 — AI uses your CLI + Git + CI
-  Case 2 — AI's output reaches your everyday tools
-  Case 3 — AI builds the tools it needs
-
-Then bridge: "Three cases. One more thing."
--->
-
----
-layout: moment
-eyebrow: interlude
-size: md
-cn: 三个案例。还有最后一件事。
----
-
-Three cases.<br/>
-**One more thing.**
-
-<!--
-Steve Jobs beat. Don't apologize for it.
-Advance to the mattpocock/skills section cover.
--->
-
----
-layout: case-cover
-num: "★"
-total: "—"
-name: mattpocock/skills
-cn: AI 的能力本身 —— 也是 Git 仓库里的 markdown 文件。
-repo: mattpocock/skills
-runtime: live
-proves: AI capabilities ARE versioned team assets
----
-
-Skills as Git-tracked, PR-reviewable, team-shared assets.
-
-<!--
-This is the climax section. Frame:
-
-  "So far: AI uses tools. AI integrates with tools. AI builds tools.
-   But here's the thing nobody told you yet — the AI's own capabilities
-   can be packaged AS files. In a Git repo. Reviewed in PRs. Shared
-   across a team. Evolved through commit history."
-
-  "This is what Matt Pocock has been building at github.com/mattpocock/skills.
-   And we're going to use four of them, live, right now, in a fresh empty repo."
--->
-
----
-layout: moment
-eyebrow: closing · the live arc
-size: sm
-cn: '安装 skills · 用 grill 把想法磨清楚 · 生成 PRD · 拆成 GitHub Issues'
-status: 'sunfmin/coe-may-demo · empty repo · ~18 min'
----
-
-/setup-matt-pocock-skills → /grill-with-docs<br/>
-→ /to-prd → /to-issues
-
-<!--
-This slide tells the audience what's about to happen LIVE. Read each
-skill aloud:
-
-  - /setup-matt-pocock-skills  — scaffold the repo for agent work
-  - /grill-with-docs           — interview a one-liner into substance
-  - /to-prd                    — produce a PRD
-  - /to-issues                 — open real GitHub Issues
-
-Then:
-  "I need one sentence from this room. Something you'd want to build,
-   propose, or improve. We'll turn it — together, live — into a tracked
-   piece of work in a public repo. You can verify it after this talk."
-
-Wait for a volunteer. Pick a usable one. (If none in 15s, deploy backup:
-"feedback questionnaire + after-actions for this very training.")
-
-Switch to the demo machine. Slidev pauses here. Come back to slides
-when the demo ends.
+PRINCIPLE — why the migration works at all.
+Beat: "Here's the why. AI works with what it can read.
+Plain text. Markdown. Shell pipes. Git diffs. Source code.
+It doesn't work with Word, Excel, Sketch — closed binary formats it can't read.
+That's why moving AI from the chatbox to the terminal is possible:
+the terminal is the place where everything is text."
+Pause on the slash-through on the right column — emphasize "these are walls, not docs."
 -->
 
 ---
 layout: default
-class: bg-paper
+title: demo A cue — git log
+class: demo-cue-slide
 ---
 
-<div class="recap-eyebrow mb-3">
-  <span class="prompt">❯</span> what just happened
+<div class="eyebrow-top">demo · 1 / 2 · live</div>
+
+<div class="cue-body">
+  <div class="cue-headline">
+    Six months from now,<br/>can you still read<br/><span class="rust">the AI's reasoning?</span>
+  </div>
+  <div class="cue-cn">六个月后，你还能读到 AI 的思路吗？</div>
 </div>
 
-<GitLog
-  repo="sunfmin/coe-may-demo"
-  :commits="[
-    { date: 'just now', msg: 'Initial commit: CLAUDE.md + docs/agents/ scaffold (setup)' },
-    { date: 'just now', msg: 'Glossary + outline for <audience topic> (grill-with-docs)' },
-    { date: 'just now', msg: 'PRD for <audience topic> (to-prd)' },
-    { date: 'just now', msg: 'Opened 5 issues on github.com/sunfmin/coe-may-demo (to-issues)' },
-  ]"
-/>
-
-<div v-click class="recap-line mt-10">
-  Twenty minutes ago this repo was <strong>empty</strong>.
+<div class="cue-terminal">
+  <div class="cue-terminal-header">~/code/system-monitor  felix@mac</div>
+  <div class="cue-terminal-body"><span class="rust">❯</span> git log --oneline -20<span class="caret">_</span></div>
 </div>
 
-<div v-click class="recap-line">
-  Now there's a glossary, a PRD, and <strong>tracked issues</strong> —<br/>
-  shaped by a sentence <span class="kw">someone in this room</span> said.
-</div>
-
-<style scoped>
-.recap-eyebrow {
-  font-family: var(--f-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--c-ink-mute);
-}
-.recap-eyebrow .prompt { color: var(--c-rust); font-weight: 700; }
-
-.recap-line {
-  font-family: var(--f-display);
-  font-size: 1.7rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--c-ink);
-  font-variation-settings: 'opsz' 144, 'SOFT' 50;
-  letter-spacing: -0.01em;
-  margin-top: 0.4rem;
-}
-.recap-line :deep(strong) {
-  color: var(--c-rust);
-  font-weight: 800;
-}
-</style>
+<div class="cue-footnote">a real Claude-built repo · <span class="mono">github.com/sunfmin/system-monitor</span></div>
 
 <!--
-This slide goes up AFTER the live demo block completes.
-
-The commit messages on this slide are illustrative — the speaker will read
-the real git log from the demo machine. Slidev is just visual reinforcement
-behind the verbal recap.
-
-Click 1: "Twenty minutes ago this repo was empty."
-Click 2: "Now there's a glossary, a PRD, and tracked issues — shaped by a
-          sentence someone in this room said."
-
-Pause. Long pause. This is the deck's climax line.
-Then advance to the CTA.
+DEMO A — CUE
+Beat: "I'm going to switch to my terminal in a second. What I want you to watch for —
+when you scroll a git log of a real Claude-built repo, what do you see?
+We'll find out together."
+Then: switch projector input to terminal. Run git log. Click into 2-3 commits and read aloud.
+After ~3 min, switch back. Echo slide loads.
 -->
 
 ---
-layout: moment
-bg: night
-eyebrow: tonight
-size: md
-cn: 今晚 —— 装好 Claude Code，克隆 mattpocock/skills，对你一直拖着的那件事跑一次 /grill-with-docs。
-status: 'github.com/mattpocock/skills'
+layout: default
+title: demo A echo — one real commit
+class: demo-echo-slide
 ---
 
-Install Claude Code. Clone mattpocock/skills.<br/>
-Run **/grill-with-docs** on the one thing you've been putting off.
+<div class="eyebrow-top">echo · 2 months ago · sunfmin/system-monitor@f026554</div>
+
+<div class="commit-block" v-pre>
+  <div class="commit-meta">
+    <span class="commit-hash">commit f026554</span>
+    <span class="commit-author">Felix Sun &lt;sunfmin@gmail.com&gt;</span>
+    <span class="commit-date">2026-03-24</span>
+  </div>
+
+  <div class="commit-title">Single-process streaming transcription with WebSocket push and sentence segmentation</div>
+
+  <pre class="commit-body">Major rewrite of the transcription pipeline:
+
+- New stream-audio-whisper.swift: single Swift binary combining
+  ScreenCaptureKit audio capture + whisper.cpp C API inference +
+  WebSocket server (Network.framework)
+- No more multi-process pipeline (capture-audio | python | whisper-cli)
+- Model loaded once at startup, stays warm in GPU memory (~0.1s load)
+- Two-tier transcription: 2s partial chunks for streaming,
+  20s re-transcription for complete sentences with punctuation
+- initial_prompt guides Chinese punctuation output
+- Sentence boundary detection with carryover: incomplete sentences
+  carried to next round using precise whisper segment timestamps
+- WebSocket (port 8421) pushes partial/final/clear_partial messages
+- Dashboard updated: WebSocket primary, HTTP polling as fallback</pre>
+
+  <div class="commit-coauthor">Co-Authored-By: Claude Opus 4.6 (1M context) &lt;noreply@anthropic.com&gt;</div>
+</div>
+
+<div class="echo-footnote">
+  <span class="rust">↑</span> two months old. <span class="cm-fn">git blame</span> it, revert it, learn from it. <span class="cn">— 永远在那里。</span>
+</div>
 
 <!--
-Dark slide. Final CTA. Read it slowly:
-
-  "Tonight. Not next week. Tonight, install Claude Code. Clone
-   mattpocock/skills. Pick one thing you've been putting off — a project,
-   a design doc, an idea you keep restating in different Slack DMs.
-   Run /grill-with-docs on it. See what falls out."
-
-Then advance to Q&A.
+DEMO A — ECHO
+Beat: "OK — switching back. What did we just look at?
+A single Swift binary, ScreenCaptureKit + whisper.cpp + WebSocket,
+two months ago. And the AI wrote this with me.
+The reasoning is right here — auditable, blame-able, forever."
+Pause. Let it sit. Don't read the whole commit out — they can read.
+Then transition to the case-tour artifacts.
 -->
 
 ---
-layout: moment
-eyebrow: questions
-size: md
-cn: 问题？想法？反对？
-status: 'github.com/theplant/coe-may-deck'
+layout: default
+title: demo B cue — meta
+class: demo-cue-slide
 ---
 
-Questions. Pushback. Stories.
+<div class="eyebrow-top">demo · 2 / 2 · live</div>
+
+<div class="cue-body">
+  <div class="cue-headline">
+    This deck was built<br/>with <span class="rust">Claude Code.</span>
+  </div>
+  <div class="cue-cn">这个 deck 就是用 Claude Code 做的。</div>
+</div>
+
+<div class="cue-subline">
+  Let's add a slide <span class="rust">right now</span> — what should it say?
+</div>
+
+<div class="cue-tree" v-pre>
+<pre>~/coe-may-deck                  felix@mac
+├── CLAUDE.md
+└── slides/
+    ├── slides.md       ← we're going to edit this
+    ├── style.css
+    └── layouts/</pre>
+</div>
 
 <!--
-Open the floor. If the room is quiet, deploy a plant in this order:
+DEMO B — CUE
+Beat: "This whole deck — the slide you're looking at now — was built with Claude Code.
+Let me show you. I'm going to ask the audience for a one-line addition,
+and we'll edit this very deck while you watch. The new slide will appear in seconds."
+Then: switch to terminal + browser side-by-side. Take an audience suggestion.
+Ask Claude to add the slide. Watch it appear. ~5-7 min.
 
-  1. (non-engineers)  "A question I get a lot is: 'I can't code — is this
-                       really for me?' — Skills are markdown describing
-                       procedures. Anyone literate can read one. Show
-                       /git-for-everyone as a counter-example."
+BACKUP TOPIC (use if audience is silent ≥15s, or the suggestion is too vague/risky):
+Say to Claude (out loud, into Claude Code, audience watching):
+  "Add a 'what to try this week' CTA slide near the end of slides.md.
+   Three concrete actions for the audience, bilingual EN + CN."
 
-  2. (engineers)      "Another one: 'How do we trust AI commits in
-                       production code?' — Same way we trust junior-dev
-                       PRs. Review, revert, blame. Git makes AI changes
-                       MORE auditable than chat sessions, not less."
+Let Claude pick the three actions, draft the bilingual line, choose the
+layout, and write the commit message. The point of the demo is the
+audience watching Claude *generate* — don't dictate the content yourself.
+-->
 
-  3. (leadership)     "And: 'Where do you start if your codebase is messy
-                       or has no docs?' — Start with /grill-with-docs on
-                       the one thing you know best. AI helps build the
-                       docs; you don't need docs before AI can help."
+---
+layout: default
+title: demo B echo — the commit you just watched
+class: demo-echo-slide
+---
 
-End by pointing at the deck repo: "Slides, outline, all the cases — public
-at github.com/theplant/coe-may-deck. Steal anything."
+<div class="eyebrow-top">echo · sunfmin/coe-may-deck@HEAD · just now</div>
+
+<div class="commit-block" v-pre>
+  <div class="commit-meta">
+    <span class="commit-hash">commit &lt;new&gt;</span>
+    <span class="commit-author">Felix Sun &lt;sunfmin@gmail.com&gt;</span>
+    <span class="commit-fresh">90 seconds ago</span>
+  </div>
+
+  <div class="commit-title">Add audience-suggested slide: &lt;topic&gt;</div>
+
+  <pre class="commit-body">Added during the May CoE training, in front of a live audience.
+The audience said: "&lt;their suggestion&gt;".
+
+Claude edited slides/slides.md, inserted a new ---slide--- block
+with a moment layout, drafted the bilingual text, and the Slidev
+dev server hot-reloaded the browser tab next to my terminal.
+
+The commit you're looking at landed about 90 seconds ago.
+It is now part of this repo's permanent history.
+
+diff --git a/slides/slides.md b/slides/slides.md
++++++++++++++++++++++++++++  (a new ---slide--- block)</pre>
+
+  <div class="commit-coauthor">Co-Authored-By: Claude Opus 4.7 (1M context) &lt;noreply@anthropic.com&gt;</div>
+</div>
+
+<div class="echo-footnote">
+  <span class="rust">↑</span> <span class="cm-fn">git pull</span> after the talk and you can read it too. <span class="cn">— 你也可以拉下来读。</span>
+</div>
+
+<!--
+DEMO B — ECHO
+Beat: "OK — switching back. That commit is permanent.
+A minute ago this deck didn't have that slide. Now it does — and that's true forever.
+Pull the repo after the talk. The reasoning is in the commit body, like every other commit
+the AI has helped me make."
+NOTE: Speaker should manually edit this slide's placeholder text after the demo to fill in:
+  - &lt;new&gt; → the actual short hash
+  - &lt;topic&gt; → the audience suggestion
+  - &lt;their suggestion&gt; → quoted verbatim
+This makes the echo feel real, not generic. If short on time, leave placeholders — punchline still lands.
 -->

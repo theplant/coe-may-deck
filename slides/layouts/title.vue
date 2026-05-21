@@ -69,14 +69,12 @@ defineProps({
 
 .title-en {
   font-family: var(--f-display);
-  font-weight: 800;
-  font-size: 5.2rem;
-  line-height: 1.02;
-  letter-spacing: -0.035em;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
   color: var(--c-ink);
-  font-variation-settings: 'opsz' 144, 'SOFT' 50, 'wght' 800;
   margin: 0;
-  white-space: nowrap;
 }
 
 .title-cn {
