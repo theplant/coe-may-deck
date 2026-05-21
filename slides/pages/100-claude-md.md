@@ -66,22 +66,23 @@ class: slide-page claude-md
 
 
 <!--
-CLAUDE.md INLINE — the concrete artifact for "memory."
-Beat 1: "OK so what does 'leave something behind' actually look like?
-  Start with the simplest one: CLAUDE.md."
-Beat 2: point at the left card.
-  "This is the real CLAUDE.md from THIS deck — the repo you're looking at.
-   It's not big. It's a few section headers and a few one-line pointers."
-Beat 3: walk the four notes on the right.
-  · auto-loaded: "every time I open Claude Code in this repo, this file is
-   already in the context window. Before turn 1."
-  · scoped: "Project-level here. There's also a ~/.claude/CLAUDE.md for
-   anything I want everywhere."
-  · selective: "Every token here lives in context — so keep INVARIANTS:
-   our conventions, our vocabulary, where things live. Not details."
-  · linked: "Notice — it POINTS AT docs/agents/*.md. Doesn't paste them.
-   The AI walks the link only if it needs to."
-Beat 4: closing line as you turn to next slide:
-  "CLAUDE.md is layer one. There are two more."
-Transitions to 3-layer architecture.
+OK so what does 'leave something behind' actually look like?
+Start with the simplest one: CLAUDE.md.
+
+This is the real CLAUDE.md from THIS deck — the repo you're looking at.
+It's not big. It's a few section headers and a few one-line pointers.
+
+Auto-loaded: every time I open Claude Code in this repo, this file is
+already in the context window. Before turn 1.
+
+Scoped: project-level here. There's also a ~/.claude/CLAUDE.md for
+anything I want everywhere.
+
+Selective: every token here lives in context — so keep INVARIANTS:
+our conventions, our vocabulary, where things live. Not details.
+
+Linked: notice — it POINTS AT docs/agents/*.md. Doesn't paste them.
+The AI walks the link only if it needs to.
+
+CLAUDE.md is one piece of a bigger memory picture. Zoom out.
 -->

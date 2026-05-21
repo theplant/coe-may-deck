@@ -54,27 +54,17 @@ class: slide-page stl-proof
 
 
 <!--
-OPENSCAD → STL PROOF — make the CLI claim concrete with a complex file
-format. Now lives AFTER the CLI mechanism slide, so it functions as a
-worked example: "you just heard the abstract claim; here it is, real."
+Let me make that CLI claim concrete. Take one row from the artifacts
+slide: .stl. Watch how AI reaches it.
 
-The audience does not need to understand CAD; they need to see that a
-binary 3D-printing artifact can start as readable text, and that the
-SAME source produces multiple ready-to-print views.
+AI did not draw a 3D model. It wrote text for one.
 
-Beat 1: ground the CLI claim with one example.
-  "Let me make that CLI claim concrete. Take one row from the artifacts
-   slide: .stl. Watch how AI reaches it."
-Beat 2: read the headline slowly, both languages.
-  "AI did not draw a 3D model. It wrote text for one."
-Beat 3: point left at the code.
-  "This is the source file: dimensions, lip, slant, supports. Reviewable
-   text. It can be diffed. It can be committed."
-Beat 4: point right at the multi-view grid.
-  "Then the CLI compiles it: openscad in, STL out. Four views, same
-   source, one printable file. No mouse touched it. The printer never
-   saw the prompt — it saw the artifact."
-Beat 5: pause on the renders, quiet.
-  "Same source. Four views. One STL. So..."
-Transitions to the thought experiment.
+This is the source file: dimensions, lip, slant, supports. Reviewable
+text. It can be diffed. It can be committed.
+
+Then the CLI compiles it: openscad in, STL out. Four views, same
+source, one printable file. No mouse touched it. The printer never
+saw the prompt — it saw the artifact.
+
+Same source. Four views. One STL. So...
 -->

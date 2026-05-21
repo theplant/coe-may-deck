@@ -33,11 +33,13 @@ class: slide-page principle
 
 
 <!--
-PRINCIPLE — why the migration works at all.
-Beat: "Here's the why. AI works with what it can read.
+Here's the why. AI works with what it can read.
 Plain text. Markdown. Shell pipes. Git diffs. Source code.
+
 It doesn't work with Word, Excel, Sketch — closed binary formats it can't read.
+
 That's why moving AI from the chatbox to the terminal is possible:
-the terminal is the place where everything is text."
-Pause on the slash-through on the right column — emphasize "these are walls, not docs."
+the terminal is the place where everything is text.
+
+These are walls, not docs.
 -->

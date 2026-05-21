@@ -11,9 +11,7 @@ The chatbox is a window.
 <div class="mt-6">You don't work in one.</div>
 
 <!--
-SETUP — name the limitation in one image.
-Beat 1: "The chatbox is a window." (pause, let it land)
-Beat 2: "You don't work in one." (pause again)
-Don't explain. The next 40 minutes are the explanation.
-Transitions straight into the side-by-side comparison demo.
+The chatbox is a window.
+
+You don't work in one.
 -->

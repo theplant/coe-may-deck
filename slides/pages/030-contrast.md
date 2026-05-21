@@ -50,9 +50,8 @@ class: slide-page contrast
 
 
 <!--
-CONTRAST — the visual thesis before any demo.
-Beat: "Left: what a chatbox is — one window, text in, text out, dies on close.
+Left: what a chatbox is — one window, text in, text out, dies on close.
 Right: what 'work' is — your terminal, your files, your git log, your team.
-The talk for the next 40 minutes is about moving the AI from the left side to the right side."
-Don't read the labels aloud. Let the picture do it.
+
+The talk for the next 40 minutes is about moving the AI from the left side to the right side.
 -->

@@ -33,20 +33,18 @@ class: slide-page platform-reframe
 
 
 <!--
-所以 — the platform-level reframe. Closes the e-commerce trio.
-This is the slide that should *change a few people's roadmap*.
+So — the admin GUI is no longer the product. The toolbox is.
 
-Beat 1: read headline slow, both languages.
-  "So — the admin GUI is no longer the product. The toolbox is."
-Beat 2: walk the table top-to-bottom. Don't read every row — pick four:
-  · product:        "we used to ship an admin panel. We're going to ship a toolbox."
-  · catalog:        "rows in a DB → diff-able text. DB becomes a cache."
-  · ops convo:      "the reason a price changed used to live in a Slack thread.
-                     Now it lives in .git/log — forever, searchable, blame-able."
-  · who drives CLI: "yesterday nobody. Tomorrow: the owner *and their AI*. That row is the whole talk."
-Beat 3: footnote, slow and final:
-  "We don't build a better admin panel. We build a shop our customers' AI can drive."
-  (CN: 我们要做的，不是更好的后台，是 AI 也能驾驭的店铺。)
-Pause. Let it land. This is the strategic line.
-Transitions to CTA.
+Product: we used to ship an admin panel. We're going to ship a toolbox.
+
+Catalog: rows in a DB → diff-able text. DB becomes a cache.
+
+Ops convo: the reason a price changed used to live in a Slack thread.
+Now it lives in .git/log — forever, searchable, blame-able.
+
+Who drives CLI: yesterday nobody. Tomorrow: the owner and their AI.
+That row is the whole talk.
+
+We don't build a better admin panel. We build a shop our customers' AI can drive.
+我们要做的，不是更好的后台，是 AI 也能驾驭的店铺。
 -->

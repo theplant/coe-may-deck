@@ -23,22 +23,10 @@ class: slide-page thought
 
 
 <!--
-THOUGHT EXPERIMENT — the philosophical reframe of the CLI/GUI argument.
-GUIs aren't a "different kind of interface" — they're a HUMAN accessibility
-layer. If humans vanished, GUIs would vanish with them. CLIs would
-remain — because that's how computers natively talk to each other.
+Think about this for a second. If only AI used computers — if humans
+didn't exist at all — GUIs wouldn't exist either.
 
-This slide is meant to be PAUSED on and DIGESTED, not read fast. Lots of
-whitespace. The audience does the work.
+GUIs are a layer for humans. CLIs are how computers actually talk.
 
-Beat 1: pause longer than usual after the CLI slide. Then read the
-  headline very slow, both languages.
-  "Think about this for a second. If only AI used computers — if humans
-   didn't exist at all — GUIs wouldn't exist either."
-Beat 2: another full pause. ~5 seconds of silence.
-Beat 3: read the closer slow.
-  "GUIs are a layer for humans. CLIs are how computers actually talk."
-Beat 4: pause. Don't explain. The thought lands by itself.
-Beat 5: quiet transition: "So — what does that mean for what *we* build?"
-Transitions to the e-commerce reframe trio (想象 / 推断 / 所以).
+So — what does that mean for what we build?
 -->

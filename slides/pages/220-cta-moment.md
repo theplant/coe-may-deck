@@ -15,23 +15,16 @@ footnote: github.com/theplant/coe-may-deck
 
 
 <!--
-CTA — the actionable closer.
-Three steps. Each one mirrors a demo we just did:
-  1. Block A opener — "open Claude Code in a repo"
-  2. Block A echo — the "one real commit" beat
-  3. Slide 16 proof — `claude "make a phone stand"` → CLI produces the file
-No grand vision. Just: replay today, once, this week.
+One — open Claude Code in a repo you already maintain.
+That's literally what we did at the start of Block A.
 
-Beat 1: read the three lines slow, like instructions. Tie each back:
-  "One — open Claude Code in a repo you already maintain.
-       That's literally what we did at the start of Block A.
-   Two — have it make one real commit. Read the diff before you say y.
-       That's the Block A echo. The one real commit.
-   Three — ask it for a CLI artifact. A script, an STL, an ffmpeg line.
-       That's the OpenSCAD proof. Recipe in, artifact out, no GUI."
-Beat 2: CN, slow.
-  "三件事，对应今天三个 demo。本周做一次，下周一你就有故事。"
-Beat 3: point at the footnote.
-  "The repo for this deck is public. Pull it. The history IS the talk."
-Pause. End.
+Two — have it make one real commit. Read the diff before you say y.
+That's the Block A echo. The one real commit.
+
+Three — ask it for a CLI artifact. A script, an STL, an ffmpeg line.
+That's the OpenSCAD proof. Recipe in, artifact out, no GUI.
+
+三件事，对应今天三个 demo。本周做一次，下周一你就有故事。
+
+The repo for this deck is public. Pull it. The history IS the talk.
 -->

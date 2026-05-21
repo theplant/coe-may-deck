@@ -38,11 +38,9 @@ class: slide-page demo-echo
 </div>
 
 <!--
-DEMO A — ECHO
-Beat: "OK — switching back. What did we just look at?
+OK — switching back. What did we just look at?
 A single Swift binary, ScreenCaptureKit + whisper.cpp + WebSocket,
 two months ago. And the AI wrote this with me.
-The reasoning is right here — auditable, blame-able, forever."
-Pause. Let it sit. Don't read the whole commit out — they can read.
-Then transition to Block B — clean slate vs repo.
+
+The reasoning is right here — auditable, blame-able, forever.
 -->

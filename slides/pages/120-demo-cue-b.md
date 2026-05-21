@@ -27,19 +27,11 @@ class: slide-page demo-cue
 </div>
 
 <!--
-DEMO B — CUE
-Beat: "This whole deck — the slide you're looking at now — was built with Claude Code.
+This whole deck — the slide you're looking at now — was built with Claude Code.
 Let me show you. I'm going to ask the audience for a one-line addition,
-and we'll edit this very deck while you watch. The new slide will appear in seconds."
-Then: switch to terminal + browser side-by-side. Take an audience suggestion.
-Ask Claude to add the slide. Watch it appear. ~5-7 min.
+and we'll edit this very deck while you watch. The new slide will appear in seconds.
 
-BACKUP TOPIC (use if audience is silent ≥15s, or the suggestion is too vague/risky):
-Say to Claude (out loud, into Claude Code, audience watching):
-  "Add a 'what to try this week' CTA slide near the end of slides.md.
-   Three concrete actions for the audience, bilingual EN + CN."
-
-Let Claude pick the three actions, draft the bilingual line, choose the
-layout, and write the commit message. The point of the demo is the
-audience watching Claude *generate* — don't dictate the content yourself.
+Backup prompt to Claude if audience is silent:
+"Add a 'what to try this week' CTA slide near the end of slides.md.
+Three concrete actions for the audience, bilingual EN + CN."
 -->

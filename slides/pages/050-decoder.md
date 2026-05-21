@@ -29,12 +29,10 @@ speed             seconds         minutes (because it's working)</pre>
 
 
 <!--
-DECODER — the audience's reference card for the next 40 minutes.
-Beat 1: "One more thing before any code.
-Assistants answer questions. Agents complete tasks."
-(Pause. Read CN aloud.)
-Beat 2: walk DOWN the five rows. Don't explain each one — the audience can read mono fonts.
-Beat 3: on the SPEED row, small pause — "yes, minutes. Because it's actually doing the work."
-Beat 4: "Hold this picture. I'll come back to it twice."
-Transitions into Block A — git log / history.
+One more thing before any code.
+Assistants answer questions. Agents complete tasks.
+
+Yes, minutes. Because it's actually doing the work.
+
+Hold this picture. I'll come back to it twice.
 -->

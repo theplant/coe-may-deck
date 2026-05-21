@@ -35,19 +35,18 @@ class: slide-page shop-system
 
 
 <!--
-推断 — inference: from the owner's one sentence, infer what our system must look like.
-Beat 1: "Every sentence the owner says needs a tool on the other side.
-  If the system doesn't expose it, the AI can't reach it."
-Beat 2: walk the grid in TWO passes.
-  Pass 1 (LEFT): read three or four owner sentences out loud, fast.
-   "Lower this price. Flash sale this weekend. Why did Tuesday drop. Refund the wrong-size orders."
-  Pass 2 (RIGHT): point at the rust-colored verbs.
-   "set. create. analyze. refund. translate. edit. segment. revert.
-    These are TOOLS. Not menu items. Not modal dialogs. Tools the AI can call."
-Beat 3: hold on the last row — `shop revert` — it's a commit.
-  "Notice this one. Rolling back a price change isn't a special feature.
-   It's the same git revert you already know. Because every change is already a commit."
-Beat 4: footnote, slow:
-  "Catalog as text. Config as files. Every change a commit. GUI is just one client among many."
-Transitions to 所以.
+Every sentence the owner says needs a tool on the other side.
+If the system doesn't expose it, the AI can't reach it.
+
+Lower this price. Flash sale this weekend. Why did Tuesday drop.
+Refund the wrong-size orders.
+
+set. create. analyze. refund. translate. edit. segment. revert.
+These are TOOLS. Not menu items. Not modal dialogs. Tools the AI can call.
+
+Notice this one. Rolling back a price change isn't a special feature.
+It's the same git revert you already know. Because every change is already a commit.
+
+Catalog as text. Config as files. Every change a commit.
+GUI is just one client among many.
 -->

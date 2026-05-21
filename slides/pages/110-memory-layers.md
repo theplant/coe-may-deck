@@ -30,9 +30,19 @@ class: slide-page memory-layers
   └───────────────────────────────────────────┘</pre>
 </div>
 
-<div class="layers-grid-wrap" v-pre>
-<pre class="layers-grid">  context window 是<span class="rust">工作台</span>   ·   local files 是<span class="rust">书架</span>   ·   git 是<span class="rust">档案馆</span>
-  workbench                  bookshelf                archive</pre>
+<div class="layers-grid-wrap">
+  <div class="col">
+    <div class="en">context window 是<span class="rust">工作台</span></div>
+    <div class="role">workbench</div>
+  </div>
+  <div class="col">
+    <div class="en">local files 是<span class="rust">书架</span></div>
+    <div class="role">bookshelf</div>
+  </div>
+  <div class="col">
+    <div class="en">git 是<span class="rust">档案馆</span></div>
+    <div class="role">archive</div>
+  </div>
 </div>
 
 <div class="layers-footnote">
@@ -42,24 +52,23 @@ class: slide-page memory-layers
 
 
 <!--
-THREE LAYERS OF MEMORY — the architecture diagram.
-Beat 1: "CLAUDE.md was layer one. Zoom out — there are three layers of memory."
-Beat 2: walk the diagram top to bottom, slow.
-  TOP — Context window:
-    "What the AI sees RIGHT NOW. Volatile. Bounded. When this session ends, it's gone."
-  MIDDLE — Local files:
-    "Latest state. CLAUDE.md, source files, docs, .scratch. Durable. Complete.
-     The AI reads pieces of this into the context window on demand."
-  BOTTOM — Git history:
-    "Every state, over time. Versioned. Auditable. The AI can `git show` a commit
-     from 2 months ago and read the reasoning that landed it — same as Demo A."
-Beat 3: hold on the arrows between the layers.
-  "Up: read/write. Down: commit/blame/revert. These aren't metaphors — they're
-   the actual operations the AI runs."
-Beat 4: short pause. Then the trio line:
-  "Context window is your workbench. Local files are your bookshelf.
-   Git is your archive. Three layers, each bounded, none replaces the other."
-Beat 5: footnote:
-  "Context is finite. Files modularize it. Git makes it travel through time."
-Transitions to Demo B cue (this deck was built with Claude Code → meta).
+CLAUDE.md lives in the middle layer — local files. Zoom out: there are three layers of memory total.
+
+CONTEXT WINDOW: what the AI sees RIGHT NOW. Volatile. Bounded.
+When this session ends, it's gone.
+
+LOCAL FILES: latest state. CLAUDE.md, source files, docs, .scratch.
+Durable. Complete. The AI reads pieces of this into the context window on demand.
+
+GIT HISTORY: every state, over time. Versioned. Auditable. The AI can
+`git show` a commit from 2 months ago and read the reasoning that landed it —
+same as Demo A.
+
+Up: read/write. Down: commit/blame/revert. These aren't metaphors —
+they're the actual operations the AI runs.
+
+Context window is your workbench. Local files are your bookshelf.
+Git is your archive. Three layers, each bounded, none replaces the other.
+
+Context is finite. Files modularize it. Git makes it travel through time.
 -->

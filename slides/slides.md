@@ -104,5 +104,33 @@ src: ./pages/210-platform-reframe.md
 ---
 
 ---
+src: ./pages/211-skills-meet.md
+---
+
+---
+src: ./pages/212-four-failures.md
+---
+
+---
+src: ./pages/213-shared-language.md
+---
+
+---
+src: ./pages/214-feedback-loops.md
+---
+
+---
+src: ./pages/215-deep-modules.md
+---
+
+---
+src: ./pages/215b-deep-people.md
+---
+
+---
+src: ./pages/216-design-discipline.md
+---
+
+---
 src: ./pages/220-cta-moment.md
 ---

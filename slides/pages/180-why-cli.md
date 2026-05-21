@@ -23,18 +23,13 @@ class: slide-page why-cli
 
 
 <!--
-THE MECHANISM — why CLI is the AI-native interface.
+Let me explain WHY — not as a preference, as a mechanism.
 
-Not "CLI is cooler" — it's a mechanical fit. LLMs produce tokens (text).
-CLIs accept stdin (text) and return stdout (text). Perfect match.
-GUIs require visual perception: cursor position, pixel reading, menu
-navigation, layout parsing. LLMs have none of those affordances.
+LLMs output text. CLIs speak text.
+This isn't a coincidence. It's the same data type.
 
-Beat 1: "Let me explain WHY — not as a preference, as a mechanism."
-Beat 2: read the headline slow. "LLMs output text. CLIs speak text."
-  "This isn't a coincidence. It's the same data type."
-Beat 3: the closer. "GUIs need cursor, pixel, visual layout — things
-  LLMs literally cannot see. CLIs need none of that."
-Beat 4: CN. "GUI 是人类专用的翻译层。AI 不需要翻译。"
-Beat 5: quick cut to next → the shop owner is who we're building for.
+GUIs need cursor, pixel, visual layout — things
+LLMs literally cannot see. CLIs need none of that.
+
+GUI 是人类专用的翻译层。AI 不需要翻译。
 -->

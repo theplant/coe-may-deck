@@ -11,10 +11,7 @@ Into your terminal, your files, your git log, your team.
 </div>
 
 <!--
-TITLE — vol. 01 magazine-cover treatment
-Open beat: read title in both languages. Pause.
-"What we're going to do today is not show you a new chatbot. We're going to show
- you AI moving out of the chat window — into your terminal, your files, your git log,
- your team."
-Don't preview the agenda. The opening comparison demo IS the agenda.
+What we're going to do today is not show you a new chatbot. We're going to show
+you AI moving out of the chat window — into your terminal, your files, your git log,
+your team.
 -->

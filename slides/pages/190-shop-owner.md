@@ -35,17 +35,14 @@ class: slide-page shop-owner
 
 
 <!--
-想象 — the future shop owner.
-The thought-experiment slide ends with silence. Use that silence.
-Then: "So — what does any of this mean for us? We sell e-commerce systems.
-Picture the shop owner we'll be selling to next year."
-Beat 1: read headline slow. EN then CN.
-Beat 2: walk the terminal mockup line by line.
-  "One sentence. The system reads the catalog, matches 247 SKUs,
-   drafts a promo file, schedules it, previews it, writes the commit message.
-   The owner says y. Ship."
-Beat 3: footnote, slow:
-  "No menus. No wizard. A sentence and a confirmation."
-  Pause. Let it land. Then: "OK — so what does THAT mean we have to build?"
-Transitions to 推断.
+So — what does any of this mean for us? We sell e-commerce systems.
+Picture the shop owner we'll be selling to next year.
+
+One sentence. The system reads the catalog, matches 247 SKUs,
+drafts a promo file, schedules it, previews it, writes the commit message.
+The owner says y. Ship.
+
+No menus. No wizard. A sentence and a confirmation.
+
+OK — so what does THAT mean we have to build?
 -->

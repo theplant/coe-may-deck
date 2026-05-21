@@ -58,16 +58,14 @@ class: slide-page block-b-opener
 
 
 <!--
-BLOCK B OPENER — F2: "Every chat is a clean slate. Every repo is not."
-Beat 1: short pause after Demo A echo. Then headline slow, both langs.
-  "Every chat is a clean slate. Every repo is not."
-Beat 2: walk the two timelines.
-  CHAT: "Open. You type. Close. Nothing left."
-  REPO: "Open. You work. Close. And tomorrow morning, your CLAUDE.md is
-   still there. Your ADRs are still there. Your .scratch notes are still
-   there. Your git log has 17 new commits with full reasoning in them.
-   Tomorrow's session reads all of this — before you say a word."
-Beat 3: footnote, slow:
-  "The AI doesn't restart from zero. It starts from what you left behind."
-Transitions to CLAUDE.md inline.
+Every chat is a clean slate. Every repo is not.
+
+CHAT: Open. You type. Close. Nothing left.
+
+REPO: Open. You work. Close. And tomorrow morning, your CLAUDE.md is
+still there. Your ADRs are still there. Your .scratch notes are still
+there. Your git log has 17 new commits with full reasoning in them.
+Tomorrow's session reads all of this — before you say a word.
+
+The AI doesn't restart from zero. It starts from what you left behind.
 -->
