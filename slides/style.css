@@ -944,9 +944,40 @@ html { font-size: 14px; }
 .slide-page.live-link .live-link-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex: 1;
+  justify-content: flex-start;
   gap: 0;
+}
+
+/* ---------- 125 demo-b live placeholder ---------- */
+.slide-page.demo-live-placeholder {
+  background: var(--c-night-paper);
+  color: var(--c-night-ink);
+  padding: 0;
+  align-items: stretch;
+  justify-content: center;
+}
+.slide-page.demo-live-placeholder .dlp-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  width: 100%;
+}
+.slide-page.demo-live-placeholder .dlp-mark {
+  font-family: var(--f-mono);
+  font-weight: 800;
+  font-size: 6.5rem;
+  letter-spacing: 0.18em;
+  color: var(--c-night-rust);
+}
+.slide-page.demo-live-placeholder .dlp-sub {
+  font-family: var(--f-mono);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: rgba(244, 239, 227, 0.45);
+  text-transform: uppercase;
 }
 
 .slide-page.live-link .live-link-card {
