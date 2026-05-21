@@ -69,32 +69,21 @@ class: slide-page deep-modules deep-people
 
 
 <!--
-Same lens. Now point it at people.
+Are you deep, or shallow? 你够厚，还是单薄？
 
-Beat 1: headline slow, both languages.
-  "Are you deep, or shallow?"
-  "你够厚，还是单薄？"
+If you sit between two people and just pass the message along — you are
+a shallow module. The two sides could talk directly. Delete you, nothing
+gets worse. "The meeting could have been an email" is exactly this.
 
-Beat 2: LEFT — shallow person, "the relay."
-  "If you sit between two people and just pass the message along — you are
-   a shallow module. The two sides could talk directly. Delete you, nothing
-   gets worse. 'The meeting could have been an email' is exactly this."
+But if you absorb the noise — filter what's important, make the call,
+translate between two vocabularies, protect each side from the other's
+complexity — both sides see a simpler interface because YOU are doing
+work. That is the value you add.
 
-Beat 3: RIGHT — deep person, "earns the seat."
-  "But if you absorb the noise — filter what's important, make the call,
-   translate between two vocabularies, protect each side from the other's
-   complexity — both sides see a simpler interface because YOU are doing
-   work. That is the value you add."
+Same heuristic. Imagine deleting yourself from the chain. Do both sides
+slow down? You were earning your seat. Do they finally talk directly
+and move faster? You were a tax. Pause on yourself sometimes.
 
-Beat 4: hold on the deletion test box.
-  "Same heuristic. Imagine deleting yourself from the chain. Do both sides
-   slow down? You were earning your seat. Do they finally talk directly
-   and move faster? You were a tax. Pause on yourself sometimes."
-
-Beat 5: footnote, slow and final.
-  "Same rule. Modules. Managers. Middleware. Meetings. Depth is what makes
-   any of them worth keeping."
-
-This slide is intentionally personal. Don't rush it. The audience should
-feel slightly seen.
+Same rule. Modules. Managers. Middleware. Meetings. Depth is what makes
+any of them worth keeping.
 -->
