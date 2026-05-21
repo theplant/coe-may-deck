@@ -437,6 +437,129 @@ Transitions into Block A — git log / history.
 
 ---
 layout: default
+title: block A — the agentic loop
+class: block-a-opener-slide
+---
+
+<div class="eyebrow-top">block A · history · 历史</div>
+
+<h1 class="block-headline">
+  The AI works in a loop.<br/>
+  <span class="rust">The loop becomes your git log.</span>
+</h1>
+
+<div class="block-cn">AI 在循环里工作。循环就是你的 git log。</div>
+
+<div class="loop-wrap">
+<pre class="loop-diagram">┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
+│  reason  │ <span class="arr">→</span>  │   tool   │ <span class="arr">→</span>  │ observe  │ <span class="arr">→</span>  │ continue │
+└──────────┘    └──────────┘    └──────────┘    └──────────┘
+     <span class="arr">↑</span>                                                <span class="arr">│</span>
+     <span class="arr">└───────────────────── loop ─────────────────────┘</span></pre>
+</div>
+
+<div class="loop-legend">
+<pre>1 · reason       what should I do next?
+2 · tool         Read · Edit · Bash · Grep · Git
+3 · observe      diff · stdout · file content
+4 · continue     loop, or stop and commit</pre>
+</div>
+
+<div class="block-footnote">
+  next: the git log of a repo Claude helped build.
+</div>
+
+<style>
+.block-a-opener-slide { padding: 2.4rem 4rem 1.6rem; display: flex; flex-direction: column; }
+.block-a-opener-slide .eyebrow-top {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+  margin-bottom: 1.2rem;
+}
+.block-a-opener-slide .block-headline {
+  font-family: var(--f-display) !important;
+  font-weight: 700 !important;
+  font-size: 2.4rem !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--c-ink);
+  margin: 0 !important;
+}
+.block-a-opener-slide .block-headline .rust { color: var(--c-rust); }
+.block-a-opener-slide .block-cn {
+  margin-top: 0.7rem;
+  font-family: var(--f-display-cn);
+  font-size: 1.15rem;
+  color: var(--c-ink-soft);
+  letter-spacing: 0.02em;
+}
+.block-a-opener-slide .loop-wrap {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;
+}
+.block-a-opener-slide .loop-diagram {
+  font-family: var(--f-mono) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.45 !important;
+  color: var(--c-ink) !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0;
+  white-space: pre;
+  overflow: visible;
+}
+.block-a-opener-slide .loop-diagram .arr {
+  color: var(--c-rust);
+  font-weight: 700;
+}
+.block-a-opener-slide .loop-legend {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: center;
+}
+.block-a-opener-slide .loop-legend pre {
+  font-family: var(--f-mono) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  color: var(--c-ink) !important;
+  background: var(--c-paper-warm) !important;
+  border: 1px solid var(--c-rule) !important;
+  border-radius: 6px;
+  padding: 1.1rem 1.4rem !important;
+  margin: 0;
+  white-space: pre;
+}
+.block-a-opener-slide .block-footnote {
+  margin-top: 1.4rem;
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  color: var(--c-ink-mute);
+  letter-spacing: 0.01em;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--c-rule);
+}
+</style>
+
+<!--
+BLOCK A OPENER — the agentic REPL.
+Beat 1: "Before we look at the git log of a real repo, here's what the AI is
+  doing inside one. It's not generating a paragraph. It's running a loop."
+Beat 2: walk the four phases — reason, tool, observe, continue.
+  "Look at what it can call: read a file, edit a file, run a shell command,
+  search, use git. Real tools. Then it looks at what came back —
+  the diff, the stdout — and decides what to do next."
+Beat 3: "Every iteration of that loop becomes a line in your git history.
+  You're about to scroll a real one."
+Transitions to Demo A cue.
+-->
+
+---
+layout: default
 title: demo A cue — git log
 class: demo-cue-slide
 ---
@@ -609,4 +732,366 @@ NOTE: Speaker should manually edit this slide's placeholder text after the demo 
   - &lt;topic&gt; → the audience suggestion
   - &lt;their suggestion&gt; → quoted verbatim
 This makes the echo feel real, not generic. If short on time, leave placeholders — punchline still lands.
+-->
+
+---
+layout: default
+title: artifacts — every format
+class: artifacts-slide
+---
+
+<div class="eyebrow-top">成果 · artifacts in every format</div>
+
+<div class="artifacts-leadin">
+  Status updates and bedtime stories — sure.<br/>
+  <span class="cn">周报、release notes、睡前故事——当然。</span>
+</div>
+
+<h1 class="artifacts-headline">
+  The same loop also writes <span class="rust">file formats</span><br/>
+  you didn't think AI could touch.
+</h1>
+
+<div class="artifacts-cn">同一个循环，也能写你以为 AI 写不了的文件格式。</div>
+
+<div class="artifacts-grid-wrap">
+<pre class="artifacts-grid">  EVERYDAY                          UNEXPECTED
+  ──────────                        ──────────
+  a slide deck <span class="fmt">.pptx</span>                a 3D-printable phone stand <span class="fmt">.stl</span>
+  a Mac or iOS app <span class="fmt">.app</span>             a KiCad PCB schematic <span class="fmt">.kicad_sch</span>
+  a personal website <span class="fmt">.html</span>          a CNC toolpath for a part <span class="fmt">.gcode</span>
+  a quarterly report <span class="fmt">.pdf</span>           a podcast with intro music <span class="fmt">.mp3</span>
+  an XLSX with live formulas <span class="fmt">.xlsx</span>  a tutorial video with narration <span class="fmt">.mp4</span></pre>
+</div>
+
+<div class="artifacts-footnote">
+  <span class="rust">AI writes the text.</span> The tool builds the file.<br/>
+  <span class="cn">AI 写文本，工具生成文件。</span>
+</div>
+
+<style>
+.artifacts-slide { padding: 1.8rem 4rem 1.2rem; display: flex; flex-direction: column; }
+.artifacts-slide .eyebrow-top {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+  margin-bottom: 0.9rem;
+}
+.artifacts-slide .artifacts-leadin {
+  font-family: var(--f-mono);
+  font-size: 0.95rem;
+  color: var(--c-ink-mute);
+  line-height: 1.55;
+  margin-bottom: 0.7rem;
+}
+.artifacts-slide .artifacts-leadin .cn {
+  font-family: var(--f-display-cn);
+  color: var(--c-ink-mute);
+}
+.artifacts-slide .artifacts-headline {
+  font-family: var(--f-display) !important;
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--c-ink);
+  margin: 0 !important;
+}
+.artifacts-slide .artifacts-headline .rust { color: var(--c-rust); }
+.artifacts-slide .artifacts-cn {
+  margin-top: 0.5rem;
+  font-family: var(--f-display-cn);
+  font-size: 1.05rem;
+  color: var(--c-ink-soft);
+  letter-spacing: 0.02em;
+}
+.artifacts-slide .artifacts-grid-wrap {
+  margin-top: 1.1rem;
+  display: flex;
+  justify-content: center;
+}
+.artifacts-slide .artifacts-grid {
+  font-family: var(--f-mono) !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65 !important;
+  color: var(--c-ink) !important;
+  background: var(--c-paper-warm) !important;
+  border: 1px solid var(--c-rule) !important;
+  border-radius: 6px;
+  padding: 1rem 1.4rem !important;
+  margin: 0;
+  white-space: pre;
+  overflow: visible;
+}
+.artifacts-slide .artifacts-grid .fmt {
+  color: var(--c-rust);
+  font-weight: 700;
+}
+.artifacts-slide .artifacts-footnote {
+  margin-top: 1rem;
+  font-family: var(--f-mono);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--c-ink-soft);
+  letter-spacing: 0.01em;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--c-rule);
+}
+.artifacts-slide .artifacts-footnote .rust {
+  color: var(--c-rust);
+  font-weight: 700;
+}
+.artifacts-slide .artifacts-footnote .cn {
+  font-family: var(--f-display-cn);
+}
+</style>
+
+<!--
+ARTIFACTS · EVERY FORMAT — challenge the audience's assumption that AI is
+"just for text." Show file formats they didn't think AI could touch:
+STL, PPTX, XLSX, KiCad, G-code. These aren't text — but their RECIPE is.
+
+The slide pivots from "AI helps with the obvious markdown stuff" to "AI's
+real reach is into binary formats via text-first generators."
+
+Beat 1: read the lead-in as concession, almost throwaway.
+  "Yes — AI writes status updates, release notes, bedtime stories.
+   You already know that."
+Beat 2: pause. then the headline, slower:
+  "But the same loop also writes file formats you didn't think AI could
+   touch."
+Beat 3: walk the grid in TWO passes.
+  LEFT (EVERYDAY): point to the SLIDE DECK row first — "yes, like the one
+   you're looking at right now." (Audience just watched Demo B prove this.)
+   Then Mac app (point at the system-monitor repo from Demo A), website,
+   PDF report, XLSX with live formulas.
+  RIGHT (UNEXPECTED): pick 2-3 surprising ones.
+   Engineer-leaning room: emphasize KiCad, G-code, CNC.
+   Non-engineer room: emphasize STL, podcast audio, tutorial video.
+   "An STL file for your 3D printer. A KiCad schematic for a circuit
+    board. G-code for a CNC machine. A podcast with intro music. A
+    tutorial video with narration. None of these are markdown."
+Beat 4: the closing principle, slow:
+  "AI writes the text. The tool builds the file."
+  This reinforces the agentic REPL (slide 6) — AI calls tools (OpenSCAD,
+  Mermaid, python-pptx, openpyxl, KiCad CLI, CAM software, LilyPond,
+  TTS APIs, ffmpeg) that take text input and emit any binary format.
+Beat 5: pause. then transition: "And here's *why* all of that works."
+Audience leans in. Goes to slide 17 (CLI · the door).
+-->
+
+---
+layout: default
+title: CLI — the door
+class: cli-slide
+---
+
+<div class="eyebrow-top">工具 · the CLI is the door</div>
+
+<h1 class="cli-headline">
+  AI lives in <span class="rust">text.</span><br/>
+  CLIs <span class="rust">talk back.</span> GUIs <span class="muted">don't.</span>
+</h1>
+
+<div class="cli-cn">AI 在文字里。CLI 会回话，GUI 不会。</div>
+
+<div class="cli-compare-wrap" v-pre>
+<pre class="cli-compare">  CLI talks back:                     GUI doesn't:
+  ────────────────                    ────────────────
+  exit codes you can parse            error dialogs in pixels
+  pipes that chain tools              windows that don't talk
+  stable flags for decades            menus redesigned yearly
+  runs headless in CI                 requires a display
+  --help is documentation             YouTube is documentation</pre>
+</div>
+
+<div class="cli-footnote">
+  every artifact on the last slide — <span class="rust">.stl · .kicad_sch · .gcode · .mp3 · .mp4</span> —<br/>
+  was built by a CLI tool.<br/>
+  <span class="cn">这就是 AI 住在终端、不住在菜单栏的原因。</span>
+</div>
+
+<style>
+.cli-slide { padding: 2.2rem 4rem 1.4rem; display: flex; flex-direction: column; }
+.cli-slide .eyebrow-top {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+  margin-bottom: 1rem;
+}
+.cli-slide .cli-headline {
+  font-family: var(--f-display) !important;
+  font-weight: 700 !important;
+  font-size: 2.2rem !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--c-ink);
+  margin: 0 !important;
+}
+.cli-slide .cli-headline .rust { color: var(--c-rust); }
+.cli-slide .cli-headline .muted { color: var(--c-ink-mute); }
+.cli-slide .cli-cn {
+  margin-top: 0.6rem;
+  font-family: var(--f-display-cn);
+  font-size: 1.1rem;
+  color: var(--c-ink-soft);
+  letter-spacing: 0.02em;
+}
+.cli-slide .cli-compare-wrap {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: center;
+}
+.cli-slide .cli-compare {
+  font-family: var(--f-mono) !important;
+  font-size: 0.92rem !important;
+  line-height: 1.65 !important;
+  color: var(--c-ink) !important;
+  background: var(--c-paper-warm) !important;
+  border: 1px solid var(--c-rule) !important;
+  border-radius: 6px;
+  padding: 1.1rem 1.4rem !important;
+  margin: 0;
+  white-space: pre;
+  overflow: visible;
+}
+.cli-slide .cli-footnote {
+  margin-top: 1.2rem;
+  font-family: var(--f-mono);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--c-ink-soft);
+  letter-spacing: 0.01em;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--c-rule);
+}
+.cli-slide .cli-footnote .rust {
+  color: var(--c-rust);
+  font-weight: 700;
+}
+.cli-slide .cli-footnote .cn {
+  font-family: var(--f-display-cn);
+}
+</style>
+
+<!--
+CLI — THE DOOR. Answers the "but how??" the audience felt looking at
+the artifacts slide. Pays off the format-reach claim with a mechanism.
+
+Beat 1: brief pause after artifacts. Then:
+  "Why does any of that work? Why can AI produce a 3D-printer file,
+   a circuit board schematic, an Excel sheet with live formulas?"
+Beat 2: read the headline both languages:
+  "AI lives in text. The CLI talks back. The GUI doesn't."
+Beat 3: walk the comparison grid. Don't read every row — pick 2-3:
+  Mixed-audience favourite: `--help` vs YouTube — AI can read `man ffmpeg`,
+   it can't watch a YouTube tutorial.
+  Engineer-leaning room: stable flags, pipes, exit codes.
+Beat 4: pause on PIPES row.
+  "Pipes are the superpower. AI can chain  `claude` → `openscad` →
+   `ffmpeg`  in one line, and produce a 3D-printable phone stand
+   with a custom song narrated over it. No GUI tool can do that."
+Beat 5: the footnote, slow and final:
+  "Every artifact on the last slide was built by a CLI tool.
+   That's why AI lives in the terminal — not in a menu bar."
+Transitions to the thought experiment.
+-->
+
+---
+layout: default
+title: thought — GUIs are for humans
+class: thought-slide
+---
+
+<div class="eyebrow-top">设想 · a thought experiment</div>
+
+<h1 class="thought-headline">
+  If only AI used computers,<br/>
+  GUIs <span class="rust">wouldn't exist.</span>
+</h1>
+
+<div class="thought-cn">如果只有 AI 用电脑，GUI 根本就不会存在。</div>
+
+<div class="thought-rule"></div>
+
+<div class="thought-closer">
+  GUIs are a layer <span class="rust">for humans.</span><br/>
+  CLIs are how computers <span class="rust">actually talk.</span><br/>
+  <span class="cn">GUI 是给人看的。CLI 才是计算机原本的语言。</span>
+</div>
+
+<style>
+.thought-slide { padding: 3rem 4rem; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.thought-slide .eyebrow-top {
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+  margin-bottom: 1.6rem;
+}
+.thought-slide .thought-headline {
+  font-family: var(--f-display) !important;
+  font-weight: 700 !important;
+  font-size: 2.4rem !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--c-ink);
+  margin: 0 !important;
+}
+.thought-slide .thought-headline .rust { color: var(--c-rust); }
+.thought-slide .thought-cn {
+  margin-top: 0.9rem;
+  font-family: var(--f-display-cn);
+  font-size: 1.25rem;
+  color: var(--c-ink-soft);
+  letter-spacing: 0.02em;
+}
+.thought-slide .thought-rule {
+  margin-top: 2.4rem;
+  width: 4rem;
+  height: 2px;
+  background: var(--c-rust);
+  display: block;
+}
+.thought-slide .thought-closer {
+  margin-top: 2.4rem;
+  font-family: var(--f-mono);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--c-ink);
+}
+.thought-slide .thought-closer .rust {
+  color: var(--c-rust);
+  font-weight: 700;
+}
+.thought-slide .thought-closer .cn {
+  font-family: var(--f-display-cn);
+  color: var(--c-ink-soft);
+}
+</style>
+
+<!--
+THOUGHT EXPERIMENT — the philosophical reframe of the CLI/GUI argument.
+GUIs aren't a "different kind of interface" — they're a HUMAN accessibility
+layer. If humans vanished, GUIs would vanish with them. CLIs would
+remain — because that's how computers natively talk to each other.
+
+This slide is meant to be PAUSED on and DIGESTED, not read fast. Lots of
+whitespace. The audience does the work.
+
+Beat 1: pause longer than usual after the CLI slide. Then read the
+  headline very slow, both languages.
+  "Think about this for a second. If only AI used computers — if humans
+   didn't exist at all — GUIs wouldn't exist either."
+Beat 2: another full pause. ~5 seconds of silence.
+Beat 3: read the closer slow.
+  "GUIs are a layer for humans. CLIs are how computers actually talk."
+Beat 4: pause. Don't explain. The thought lands by itself.
+Beat 5: quiet transition: "So — what will you build with it this week?"
+Transitions to CTA.
 -->

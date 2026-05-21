@@ -36,7 +36,7 @@ The 8 axes (lives-where-you-work, files-as-memory, git-as-history, CLI ecosystem
 - **F3** · The **agentic REPL** — *reason → tool → observe → continue*. → Block A opener (slide 6), rendered visually as a loop.
 - **F4** · The **lethal trifecta** (Willison) — *private data + untrusted content + external write*. → Q&A planted answer only, NOT a slide.
 
-## Running order (16 slides + verbal Q&A · ~50 min)
+## Running order (19 slides + verbal Q&A · ~50 min)
 
 | # | Slide | Block | Status | ≈ min |
 |---|---|---|---|---|
@@ -44,8 +44,8 @@ The 8 axes (lives-where-you-work, files-as-memory, git-as-history, CLI ecosystem
 | 2 | Setup — "chatbox is a window" | Opening | ✓ | 1 |
 | 3 | Contrast — chat window vs terminal | Opening | ✓ | 2 |
 | 4 | Principle — "AI works with text" | Opening | ✓ | 2 |
-| 5 | **Decoder — chat vs agent** (F1) | Opening | ✓ NEW | 2 |
-| 6 | Block A opener — the **agentic REPL** (F3) | History | to build | 2 |
+| 5 | **Decoder — chat vs agent** (F1) | Opening | ✓ | 2 |
+| 6 | Block A opener — the **agentic REPL** (F3) | History | ✓ | 2 |
 | 7 | Demo A cue — git log reveal | History | ✓ | 1 |
 | 8 | Demo A echo — `f026554` | History | ✓ | 3 (+ demo) |
 | 9 | Block B opener — **"clean slate vs repo"** (F2) | Memory | to build | 2 |
@@ -55,9 +55,22 @@ The 8 axes (lives-where-you-work, files-as-memory, git-as-history, CLI ecosystem
 | 13 | `SKILL.md` inline (real) | Capabilities | to build | 4 |
 | 14 | Demo B cue — meta live-edit | Capabilities | ✓ | 1 |
 | 15 | Demo B echo — fresh commit | Capabilities | ✓ | 6 (+ demo) |
-| 16 | CTA — install / clone / try this week | Closing | to build | 3 |
+| 16 | **Artifacts — every format** (divergence) | Closing | ✓ | 3 |
+| 17 | **CLI — the door** (mechanism) | Closing | ✓ | 2 |
+| 18 | **Thought — GUIs are for humans** (reframe) | Closing | ✓ NEW | 1 |
+| 19 | CTA — install / clone / try this week | Closing | to build | 2 |
 
-Total ≈ 40 min, leaving ~10 min for Q&A.
+Total ≈ 45 min, leaving ~5 min for Q&A.
+
+### Closing arc · zoom in → out → deeper → reframe → home
+
+The last five slides pulse the audience's focus five ways:
+
+- **15 · Demo B echo** — zoom IN: Claude just edited *this very deck*.
+- **16 · Artifacts** — zoom OUT: *the same loop also writes file formats you didn't think AI could touch.* Concession line acknowledges the markdown-laundry stuff (status updates, bedtime stories), then a two-column grid contrasts **EVERYDAY** (a slide deck, a Mac/iOS app, a personal website, a quarterly report PDF, an XLSX with live formulas) against **UNEXPECTED** (`.stl`, `.kicad_sch`, `.gcode`, `.mp3`, `.mp4`). Closing principle: *AI writes the text. The tool builds the file.*
+- **17 · CLI is the door** — zoom DEEPER: explains *why* artifacts in any format are reachable. *AI lives in text. CLIs talk back. GUIs don't.* Comparison grid (CLI vs GUI: exit codes vs dialogs, pipes vs walls, `--help` vs YouTube, headless vs display-bound, stable-flags vs redesigned-yearly). Closing line: *every artifact on the last slide was built by a CLI tool.*
+- **18 · Thought experiment** — zoom REFRAME: *if only AI used computers, GUIs wouldn't exist.* The philosophical reveal — GUIs are a HUMAN accessibility layer, not a fundamental computing necessity. CLIs are how computers actually talk. Designed for a long pause (~5 sec of silence after the headline). Lots of whitespace. The audience does the work.
+- **19 · CTA** — zoom HOME: *this week, pick ONE.*
 
 ## Live demos (two, both LIVE)
 
@@ -125,7 +138,7 @@ Used if the room is shy. Ask aloud as *"a question I get a lot is…"*.
 
 ## Next steps
 
-1. Build slides **6, 9, 10, 11, 12, 13, 16** (seven slides remaining). Slide 5 (decoder) done.
+1. Build slides **9, 10, 11, 12, 13, 19** (six slides remaining). Done so far: 5 (decoder), 6 (Block A REPL opener), 16 (artifacts), 17 (CLI is the door), 18 (thought experiment).
 2. Rehearse. Time each block end-to-end.
 3. Manually update Demo B echo placeholders post-demo on the day (commit hash + audience topic + suggestion).
 
