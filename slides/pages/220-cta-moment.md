@@ -10,7 +10,7 @@ footnote: github.com/theplant/coe-may-deck
 <div class="cta-items">
   <div class="cta-item"><span class="n">1</span><strong>Claude Code</strong> in your own repo.</div>
   <div class="cta-item"><span class="n">2</span><strong>One real commit.</strong> Read the diff.</div>
-  <div class="cta-item"><span class="n">3</span>Ask: <strong>give me a CLI artifact.</strong></div>
+  <div class="cta-item"><span class="n">3</span><strong>Create a skill</strong> &mdash; share it in <strong>#plant-ai</strong>.</div>
 </div>
 
 
@@ -21,8 +21,9 @@ That's literally what we did at the start of Block A.
 Two — have it make one real commit. Read the diff before you say y.
 That's the Block A echo. The one real commit.
 
-Three — ask it for a CLI artifact. A script, an STL, an ffmpeg line.
-That's the OpenSCAD proof. Recipe in, artifact out, no GUI.
+Three — write one skill. Even a tiny one. /write-a-skill takes you
+through it. Drop the SKILL.md into #plant-ai so the rest of us can
+fork it. That's the Block C echo — we own the tools.
 
 三件事，对应今天三个 demo。本周做一次，下周一你就有故事。
 
