@@ -7,8 +7,7 @@ class: slide-page feedback-loops
 <div class="eyebrow-top">反馈回路 · /tdd · /diagnose</div>
 
 <h1 class="headline">
-  Build the loop.<br/>
-  <span class="rust">AI runs the laps.</span>
+  Build the loop. <span class="rust">AI runs the laps.</span>
 </h1>
 
 <div class="cn">你搭回路，AI 一圈一圈跑。</div>
@@ -63,8 +62,8 @@ class: slide-page feedback-loops
 </div>
 
 <div class="loops-footnote">
-  no loop = no signal. <span class="rust">staring at code doesn't count.</span><br/>
-  <span class="cn">没有回路就没有信号。盯着代码看不算。</span>
+  if you can't <span class="rust">run it</span>, you can't see it. reading code is just guessing.<br/>
+  <span class="cn">不能跑就看不见 —— 看代码是在猜。</span>
 </div>
 
 
@@ -97,5 +96,5 @@ that actually triggers the bug. HITL bash at #10 is last resort.
 Once you have the loop: reproduce, three to five falsifiable
 hypotheses BEFORE testing any of them, instrument, fix, regression.
 
-No loop, no signal. Staring at code doesn't count.
+If you can't run it, you can't see it. Reading code is just guessing.
 -->

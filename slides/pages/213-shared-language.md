@@ -7,8 +7,7 @@ class: slide-page shared-language
 <div class="eyebrow-top">共同语言 · /grill-with-docs · /grill-me</div>
 
 <h1 class="headline">
-  One word the agent learns<br/>
-  saves <span class="rust">a paragraph forever.</span>
+  One word. <span class="rust">One paragraph saved.</span>
 </h1>
 
 <div class="cn">教会 AI 一个词，省下一段话。下一次开始，就不必再解释。</div>
