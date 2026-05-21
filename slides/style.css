@@ -1973,3 +1973,222 @@ html { font-size: 14px; }
   color: var(--c-ink-mute);
 }
 
+/* ---------- 218 demo-echo-c (skill we just wrote) ---------- */
+.slide-page.demo-echo-c .echo-c-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  width: 100%;
+  align-items: stretch;
+}
+.slide-page.demo-echo-c .echo-c-file,
+.slide-page.demo-echo-c .echo-c-run {
+  background: #1A1611;
+  border: 1px solid #2A2418;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.slide-page.demo-echo-c .echo-c-tab {
+  background: #2A2418;
+  color: rgba(244, 239, 227, 0.7);
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.8rem;
+  border-bottom: 1px solid #1A1611;
+}
+.slide-page.demo-echo-c .echo-c-content {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  line-height: 1.55;
+  color: #F4EFE3;
+  padding: 0.7rem 0.9rem 0.85rem;
+}
+.slide-page.demo-echo-c .echo-c-content .ln {
+  white-space: pre-wrap;
+}
+.slide-page.demo-echo-c .echo-c-content .ln.blank {
+  height: 0.55em;
+}
+.slide-page.demo-echo-c .echo-c-content .h1 {
+  color: rgba(244, 239, 227, 0.55);
+}
+.slide-page.demo-echo-c .echo-c-content .h2 {
+  color: #E8C547;
+  font-weight: 700;
+}
+.slide-page.demo-echo-c .echo-c-content .h3 {
+  color: var(--c-rust);
+  font-weight: 700;
+}
+.slide-page.demo-echo-c .echo-c-content .inl {
+  color: #E8C547;
+  background: rgba(244, 239, 227, 0.07);
+  padding: 0 0.22rem;
+  border-radius: 2px;
+}
+.slide-page.demo-echo-c .echo-c-content .dim {
+  color: rgba(244, 239, 227, 0.45);
+  font-style: italic;
+}
+.slide-page.demo-echo-c .echo-c-content .num {
+  color: var(--c-rust);
+  font-weight: 800;
+  display: inline-block;
+  min-width: 1.4em;
+}
+.slide-page.demo-echo-c .echo-c-content .src {
+  color: #E8C547;
+  font-weight: 600;
+}
+.slide-page.demo-echo-c .echo-c-content .why {
+  color: rgba(244, 239, 227, 0.55);
+  font-style: italic;
+}
+.slide-page.demo-echo-c .echo-c-footnote {
+  margin-top: 0.85rem;
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--c-ink-soft);
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--c-rule);
+  width: 100%;
+}
+.slide-page.demo-echo-c .echo-c-footnote .rust {
+  color: var(--c-rust);
+  font-weight: 700;
+  margin-right: 0.3rem;
+}
+.slide-page.demo-echo-c .echo-c-footnote .cn {
+  font-family: var(--f-display-cn);
+  color: var(--c-ink-mute);
+}
+
+/* ---------- 216b skill-scope (global vs project) ---------- */
+.slide-page.skill-scope .ss-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  align-items: stretch;
+}
+.slide-page.skill-scope .ss-side {
+  background: var(--c-paper-warm);
+  border: 1px solid var(--c-rule);
+  border-radius: 6px;
+  padding: 0.7rem 0.95rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.slide-page.skill-scope .ss-side.ss-global {
+  border-left: 3px solid var(--c-rust);
+}
+.slide-page.skill-scope .ss-side.ss-project {
+  border-left: 3px solid var(--c-sage);
+}
+.slide-page.skill-scope .ss-tag {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-ink-mute);
+  font-weight: 700;
+}
+.slide-page.skill-scope .ss-side.ss-global .ss-tag { color: var(--c-rust); }
+.slide-page.skill-scope .ss-side.ss-project .ss-tag { color: var(--c-sage); }
+.slide-page.skill-scope .ss-path {
+  background: #1A1611;
+  border: 1px solid #2A2418;
+  border-radius: 4px;
+  padding: 0.4rem 0.7rem;
+}
+.slide-page.skill-scope .ss-path pre {
+  font-family: var(--f-mono) !important;
+  font-size: 0.85rem !important;
+  line-height: 1.4 !important;
+  color: #F4EFE3 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.slide-page.skill-scope .ss-line {
+  font-family: var(--f-mono);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--c-ink);
+}
+.slide-page.skill-scope .ss-line .rust { color: var(--c-rust); font-weight: 700; }
+.slide-page.skill-scope .ss-dim {
+  color: var(--c-ink-mute);
+  font-style: italic;
+}
+.slide-page.skill-scope .ss-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.5rem 0.65rem;
+  background: rgba(26, 22, 17, 0.04);
+  border-radius: 4px;
+}
+.slide-page.skill-scope .ss-ex {
+  font-family: var(--f-mono);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.slide-page.skill-scope .ss-ex .tool {
+  color: var(--c-rust);
+  font-weight: 700;
+}
+.slide-page.skill-scope .ss-side.ss-project .ss-ex .tool {
+  color: var(--c-sage);
+}
+.slide-page.skill-scope .ss-why {
+  font-family: var(--f-mono);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--c-ink-soft);
+  padding-top: 0.45rem;
+  border-top: 1px dashed var(--c-rule);
+}
+.slide-page.skill-scope .ss-why .ss-why-label {
+  color: var(--c-ink-mute);
+  font-weight: 700;
+  margin-right: 0.4rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+}
+.slide-page.skill-scope .ss-why .rust { color: var(--c-rust); font-weight: 700; }
+.slide-page.skill-scope .ss-why .cn {
+  font-family: var(--f-display-cn);
+  color: var(--c-ink-mute);
+  font-size: 0.78rem;
+}
+.slide-page.skill-scope .ss-callout {
+  margin-top: 0.85rem;
+  background: var(--c-paper-warm);
+  border: 1px solid var(--c-rule);
+  border-left: 3px solid var(--c-rust);
+  border-radius: 6px;
+  padding: 0.55rem 0.9rem 0.65rem;
+  font-family: var(--f-mono);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--c-ink);
+  width: 100%;
+}
+.slide-page.skill-scope .ss-callout .rust {
+  color: var(--c-rust);
+  font-weight: 700;
+}
+.slide-page.skill-scope .ss-callout .cn {
+  font-family: var(--f-display-cn);
+  color: var(--c-ink-mute);
+  font-size: 0.82rem;
+}
+

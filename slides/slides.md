@@ -132,5 +132,13 @@ src: ./pages/216-design-discipline.md
 ---
 
 ---
+src: ./pages/216b-skill-scope.md
+---
+
+---
+src: ./pages/217-demo-cue-c.md
+---
+
+---
 src: ./pages/220-cta-moment.md
 ---

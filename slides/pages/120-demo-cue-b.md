@@ -4,7 +4,7 @@ title: demo B cue — meta
 class: slide-page demo-cue
 ---
 
-<div class="eyebrow-top">demo · 2 / 2 · live</div>
+<div class="eyebrow-top">demo · 2 / 3 · live</div>
 
 <div class="cue-body">
   <div class="headline">

@@ -4,7 +4,7 @@ title: demo A cue — git log
 class: slide-page demo-cue
 ---
 
-<div class="eyebrow-top">demo · 1 / 2 · live</div>
+<div class="eyebrow-top">demo · 1 / 3 · live</div>
 
 <div class="cue-body">
   <div class="headline">
