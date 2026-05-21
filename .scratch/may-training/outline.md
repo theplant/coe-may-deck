@@ -36,7 +36,7 @@ The 8 axes (lives-where-you-work, files-as-memory, git-as-history, CLI ecosystem
 - **F3** · The **agentic REPL** — *reason → tool → observe → continue*. → Block A opener (slide 6), rendered visually as a loop.
 - **F4** · The **lethal trifecta** (Willison) — *private data + untrusted content + external write*. → Q&A planted answer only, NOT a slide.
 
-## Running order (19 slides + verbal Q&A · ~50 min)
+## Running order (23 slides + verbal Q&A · ~52 min)
 
 | # | Slide | Block | Status | ≈ min |
 |---|---|---|---|---|
@@ -48,29 +48,41 @@ The 8 axes (lives-where-you-work, files-as-memory, git-as-history, CLI ecosystem
 | 6 | Block A opener — the **agentic REPL** (F3) | History | ✓ | 2 |
 | 7 | Demo A cue — git log reveal | History | ✓ | 1 |
 | 8 | Demo A echo — `f026554` | History | ✓ | 3 (+ demo) |
-| 9 | Block B opener — **"clean slate vs repo"** (F2) | Memory | to build | 2 |
-| 10 | `CLAUDE.md` inline (real) | Memory | to build | 4 |
-| 11 | `.scratch/` or `docs/adr/` as recall | Memory | to build | 4 |
+| 9 | Block B opener — **"clean slate vs repo"** (F2) | Memory | ✓ | 2 |
+| 10 | `CLAUDE.md` inline (real) | Memory | ✓ | 3 |
+| 11 | **Three layers of memory** — context · files · git | Memory | ✓ | 3 |
 | 12 | Block C opener — "a workflow is a file" | Capabilities | to build | 2 |
 | 13 | `SKILL.md` inline (real) | Capabilities | to build | 4 |
 | 14 | Demo B cue — meta live-edit | Capabilities | ✓ | 1 |
 | 15 | Demo B echo — fresh commit | Capabilities | ✓ | 6 (+ demo) |
 | 16 | **Artifacts — every format** (divergence) | Closing | ✓ | 3 |
 | 17 | **CLI — the door** (mechanism) | Closing | ✓ | 2 |
-| 18 | **Thought — GUIs are for humans** (reframe) | Closing | ✓ NEW | 1 |
-| 19 | CTA — install / clone / try this week | Closing | to build | 2 |
+| 18 | **Proof — OpenSCAD → STL** (concrete worked example) | Closing | ✓ | 2 |
+| 19 | **Thought — GUIs are for humans** (reframe) | Closing | ✓ | 1 |
+| 20 | **想象 — the shop owner you sell to** (e-comm reframe) | Closing | ✓ | 1.5 |
+| 21 | **推断 — what the system has to expose** (e-comm reframe) | Closing | ✓ | 1.5 |
+| 22 | **所以 — the platform we build** (e-comm reframe) | Closing | ✓ | 2 |
+| 23 | CTA — install / clone / try this week | Closing | to build | 2 |
 
-Total ≈ 45 min, leaving ~5 min for Q&A.
+Total ≈ 52 min, leaving ~3–8 min slack for Q&A. If overrun, the most cuttable rows are slide 11 (three layers — the conceptual frame, can be told verbally over slide 10) or `所以` (22).
 
-### Closing arc · zoom in → out → deeper → reframe → home
+### Block B · what changed (2026-05-21)
 
-The last five slides pulse the audience's focus five ways:
+Slide 11 was originally scoped as ".scratch/ or docs/adr/ as recall" — a concrete artifact slide pairing with the CLAUDE.md inline. It was promoted to **"three layers of memory"** instead: an ASCII architecture diagram (context window / local files / git history) with the workbench · bookshelf · archive metaphor. Rationale: the conceptual frame ties Block B to the e-commerce reframe trio later (slot 21 — owner ↔ tool ↔ git) and directly answers the discussion "本地文件和 git 和 context 是怎么配合怎么相关的". A concrete `.scratch/` or `docs/adr/` artifact can be added later as slide 11.5 if Block B feels too abstract in rehearsal — but rehearsal-first.
+
+### Closing arc · zoom in → out → deeper → concrete → reframe → ours → home
+
+The last nine slides pulse the audience's focus across the full zoom range — and the final three land the abstraction in our specific business (e-commerce platform):
 
 - **15 · Demo B echo** — zoom IN: Claude just edited *this very deck*.
 - **16 · Artifacts** — zoom OUT: *the same loop also writes file formats you didn't think AI could touch.* Concession line acknowledges the markdown-laundry stuff (status updates, bedtime stories), then a two-column grid contrasts **EVERYDAY** (a slide deck, a Mac/iOS app, a personal website, a quarterly report PDF, an XLSX with live formulas) against **UNEXPECTED** (`.stl`, `.kicad_sch`, `.gcode`, `.mp3`, `.mp4`). Closing principle: *AI writes the text. The tool builds the file.*
 - **17 · CLI is the door** — zoom DEEPER: explains *why* artifacts in any format are reachable. *AI lives in text. CLIs talk back. GUIs don't.* Comparison grid (CLI vs GUI: exit codes vs dialogs, pipes vs walls, `--help` vs YouTube, headless vs display-bound, stable-flags vs redesigned-yearly). Closing line: *every artifact on the last slide was built by a CLI tool.*
-- **18 · Thought experiment** — zoom REFRAME: *if only AI used computers, GUIs wouldn't exist.* The philosophical reveal — GUIs are a HUMAN accessibility layer, not a fundamental computing necessity. CLIs are how computers actually talk. Designed for a long pause (~5 sec of silence after the headline). Lots of whitespace. The audience does the work.
-- **19 · CTA** — zoom HOME: *this week, pick ONE.*
+- **18 · OpenSCAD → STL proof** — zoom CONCRETE: takes one row from the artifacts slide (`.stl`) and demonstrates the CLI claim from slide 17 with a worked example. AI writes `phone-stand.scad`, `openscad` CLI emits `phone-stand.stl`, and a 2×2 grid of renders (perspective + front + side + top) proves the same source produces a real 3D object. This makes "AI writes the text; the tool builds the file" observable instead of abstract.
+- **19 · Thought experiment** — zoom REFRAME: *if only AI used computers, GUIs wouldn't exist.* The philosophical reveal — GUIs are a HUMAN accessibility layer, not a fundamental computing necessity. CLIs are how computers actually talk. Designed for a long pause (~5 sec of silence after the headline). Lots of whitespace. The audience does the work.
+- **20 · 想象 (shop owner)** — zoom OURS · vivid: lands the abstract CLI-future on our customer. *Today they click 47 screens. Soon they say one sentence.* Terminal mockup of a shop owner saying `shop "summer collection 15% off · Fri→Sun · home banner"` — and the system reads the catalog, matches 247 SKUs, drafts a promo file, schedules it, previews it, writes the commit message. *No menus. No wizard. A sentence and a confirmation.*
+- **21 · 推断 (system exposes)** — zoom OURS · mechanism: from the owner's one sentence, infer what the system must look like. *Every sentence the owner says needs a tool on the other side.* Two-column grid maps owner phrases (`"lower this price 15%"`, `"flash sale this weekend"`, …) to CLI tools (`shop product price set`, `shop promo schedule`, …). Last row: `"roll back yesterday's price"` → `shop revert — a commit`. *Catalog as text. Config as files. Every change a commit. GUI is just one client among many.*
+- **22 · 所以 (platform reframe)** — zoom OURS · strategy: the company-level reframe. *The admin GUI is no longer the product. The toolbox is.* Two-column table maps yesterday's platform shapes (admin GUI, DB rows, wizards, form submissions, Slack threads, tribal knowledge, SOPs in Confluence) to tomorrow's (a toolbox of CLIs, diff-able text, files in git, commits with reasons, reasoning in `.git/log`, `CLAUDE.md` per shop, skills in `.claude/skills/`). Last row says it plainly — yesterday the CLI was driven by nobody; tomorrow it's driven by the owner *and their AI*. Closing strategic line: *we don't build a better admin panel. We build a shop our customers' AI can drive.*
+- **23 · CTA** — zoom HOME: *this week, pick ONE.*
 
 ## Live demos (two, both LIVE)
 
@@ -138,7 +150,7 @@ Used if the room is shy. Ask aloud as *"a question I get a lot is…"*.
 
 ## Next steps
 
-1. Build slides **9, 10, 11, 12, 13, 19** (six slides remaining). Done so far: 5 (decoder), 6 (Block A REPL opener), 16 (artifacts), 17 (CLI is the door), 18 (thought experiment).
+1. Build slides **12, 13, 23** (three slides remaining: Block C opener, SKILL.md inline, CTA). Done so far: 5 (decoder), 6 (Block A REPL opener), 9 (Block B opener — clean slate vs repo), 10 (CLAUDE.md inline), 11 (three layers of memory), 16 (artifacts), 17 (CLI is the door), 18 (OpenSCAD → STL proof), 19 (thought experiment), 20 (想象 · shop owner), 21 (推断 · system exposes), 22 (所以 · platform reframe).
 2. Rehearse. Time each block end-to-end.
 3. Manually update Demo B echo placeholders post-demo on the day (commit hash + audience topic + suggestion).
 
