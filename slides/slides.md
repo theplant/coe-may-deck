@@ -1637,10 +1637,10 @@ class: stl-proof-slide
 </div>
 
 <div class="stl-preview">
-<img src="/demos/phone-stand.png" alt="perspective view" />
-<img src="/demos/phone-stand-front.png" alt="front view" />
-<img src="/demos/phone-stand-side.png" alt="side view" />
-<img src="/demos/phone-stand-top.png" alt="top view" />
+<img :src="'demos/phone-stand.png'" alt="perspective view" />
+<img :src="'demos/phone-stand-front.png'" alt="front view" />
+<img :src="'demos/phone-stand-side.png'" alt="side view" />
+<img :src="'demos/phone-stand-top.png'" alt="top view" />
 <div class="preview-caption">phone-stand.stl · 4 views from one source</div>
 </div>
 </div>
