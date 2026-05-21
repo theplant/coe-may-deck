@@ -4,3 +4,11 @@ dist/
 *.log
 .slidev/
 slides-export/
+slides-export.pdf
+
+# Editor / tool caches
+.atomcode/
+
+# Local screenshot + verification scripts and their PNG outputs
+slides/.scratch-*
+slides/.screenshot-*
