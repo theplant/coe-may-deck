@@ -850,19 +850,19 @@ html { font-size: 14px; }
 }
 .slide-page.claude-md .file-content {
   font-family: var(--f-mono);
-  font-size: 0.74rem;
-  line-height: 1.5;
+  font-size: 0.7rem;
+  line-height: 1.45;
   color: #F4EFE3;
   background: transparent;
   border: none;
-  padding: 0.7rem 0.9rem;
+  padding: 0.6rem 0.9rem;
   margin: 0;
 }
 .slide-page.claude-md .file-content .ln {
   white-space: pre;
 }
 .slide-page.claude-md .file-content .ln.blank {
-  height: 0.7em;
+  height: 0.45em;
 }
 .slide-page.claude-md .file-content .h1 {
   color: #E8C547;

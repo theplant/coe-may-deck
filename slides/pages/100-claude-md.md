@@ -19,6 +19,13 @@ class: slide-page claude-md
     <div class="file-content">
       <div class="ln"><span class="h1"># CLAUDE.md</span></div>
       <div class="ln blank"></div>
+      <div class="ln"><span class="h2">## Slides</span></div>
+      <div class="ln blank"></div>
+      <div class="ln">After editing, from <span class="inl">slides/</span>:</div>
+      <div class="ln">1. <span class="inl">npm run build</span></div>
+      <div class="ln">2. <span class="inl">npm run export -- --range &lt;N&gt;</span></div>
+      <div class="ln">3. Read PNGs · check no clipping.</div>
+      <div class="ln blank"></div>
       <div class="ln"><span class="h2">## Agent skills</span></div>
       <div class="ln blank"></div>
       <div class="ln"><span class="h3">### Issue tracker</span></div>
