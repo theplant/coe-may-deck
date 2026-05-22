@@ -13,21 +13,44 @@ class: slide-page block-a-opener
 
 <div class="cn">AI 在循环里工作。循环就是你的 git log。</div>
 
-<div class="loop-wrap">
-<pre class="loop-diagram">┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
-│  reason  │ <span class="arr">→</span>  │   act    │ <span class="arr">→</span>  │ observe  │ <span class="arr">→</span>  │  verify  │ <span class="arr">→</span>  │ continue │
-└──────────┘    └──────────┘    └──────────┘    └──────────┘    └──────────┘
-     <span class="arr">↑</span>                                       <span class="arr">red</span>  <span class="arr">│</span>                <span class="arr">│</span>
-     <span class="arr">└────────────────── loop on red ────────┘</span>                <span class="arr">▼</span>
-                                                            <span class="rust">git commit</span></pre>
+<div class="loop-stage">
+
+  <div class="loop-row">
+    <div class="loop-step">reason</div>
+    <span class="loop-arrow">→</span>
+    <div class="loop-step">act</div>
+    <span class="loop-arrow">→</span>
+    <div class="loop-step">observe</div>
+    <span class="loop-arrow">→</span>
+    <div class="loop-step loop-step-gate">
+      verify
+      <span class="loop-gate-tag">the gate</span>
+    </div>
+  </div>
+
+  <div class="loop-outcomes">
+    <div class="outcome">
+      <span class="outcome-mark">✗</span>
+      <span class="outcome-name">red</span>
+      <span class="outcome-sep">→</span>
+      <span class="outcome-action">↺ loop back to reason</span>
+    </div>
+    <div class="outcome-divider"></div>
+    <div class="outcome">
+      <span class="outcome-mark outcome-mark-green">✓</span>
+      <span class="outcome-name">green</span>
+      <span class="outcome-sep">→</span>
+      <span class="outcome-action">↓ git commit</span>
+    </div>
+  </div>
+
 </div>
 
 <div class="loop-legend">
-<pre>1 · reason       what should I do next?
-2 · act          Read · Edit · Bash · Grep · Git
-3 · observe      diff · stdout · file content
-4 · verify       tests · build · lint · screenshot — the gate
-5 · continue     loop on red · commit on green</pre>
+<pre>reason       what should I do next?
+act          Read · Edit · Bash · Grep · Git
+observe      diff · stdout · file content
+verify       tests · build · lint · screenshot</pre>
 </div>
 
 <div class="block-footnote">
@@ -43,6 +66,7 @@ Look at what it can call: read a file, edit a file, run a shell command,
 search, use git. Real tools. Then it looks at what came back —
 the diff, the stdout — and decides what to do next.
 
-Every iteration of that loop becomes a line in your git history.
+Verify is the gate. Red — something failed — loop back. Green — commit.
+Every green commit becomes a line in your git history.
 You're about to scroll a real one.
 -->

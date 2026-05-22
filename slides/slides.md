@@ -36,6 +36,10 @@ src: ./pages/040-principle.md
 ---
 
 ---
+src: ./pages/045-local-tools.md
+---
+
+---
 src: ./pages/050-decoder.md
 ---
 
