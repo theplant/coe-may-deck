@@ -77,19 +77,14 @@ OK so what does 'leave something behind' actually look like?
 Start with the simplest one: CLAUDE.md.
 
 This is the real CLAUDE.md from THIS deck — the repo you're looking at.
-It's not big. It's a few section headers and a few one-line pointers.
+Look at the 'Slides' section. I didn't have to tell Claude how to build
+this deck today. I told it ONCE in this file, yesterday.
+
+This is the core idea: you aren't just giving the AI context, you are
+TEACHING IT THE PROCESS. "After editing, run build, then export."
+Because these three lines exist, the AI can finish the task without
+asking me "how do I preview this?"
 
 Auto-loaded: every time I open Claude Code in this repo, this file is
 already in the context window. Before turn 1.
-
-Scoped: project-level here. There's also a ~/.claude/CLAUDE.md for
-anything I want everywhere.
-
-Selective: every token here lives in context — so keep INVARIANTS:
-our conventions, our vocabulary, where things live. Not details.
-
-Linked: notice — it POINTS AT docs/agents/*.md. Doesn't paste them.
-The AI walks the link only if it needs to.
-
-CLAUDE.md is one piece of a bigger memory picture. Zoom out.
 -->
